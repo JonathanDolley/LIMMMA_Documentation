@@ -61,13 +61,34 @@ Use slide show arrows or your keyboard arrow buttons to move through the slides.
 
 Having created a new project and set our desired extent, we can open the model view and start building. At first, you will be presented with a blank screen with no visible controls. Don't worry, the first thing to do is to add the various components you want to include in your model. This is done by simply right clicking the screen and selecting from a list of various types of components (see below). Datasets will include whatever your team has imported into your LIMMMA workspace. In addition to datasets there are numerous components for transforming inputs from those datasets in various ways and converting them into outputs for use in map view or in other models.
 
-The first step in building our model is to add to the model the various datasets we need.
+The first step in building our model is to add to the model the various datasets we need. This model only uses two:
+
+1. Boolean dataset from the Living England Land Cover classification.
+2. Numerical dataset of feature height derived from LIDAR imaging.
+
+Let's first add these to the model.
 
 <iframe class="slide-deck" src="./slides/demo/03-02-add-datasets.html"></iframe>
 
+:::{.callout-note}
+It is important to understand at this point that, when a dataset is added to a model it is converted to a raster format with cell dimensions adjusted to match the zoom level of the project. So whether it is a categorical, boolean or numerical dataset each dataset will share the same resolution. The zoom level is is determined according to the extent chosen when the project was created. However, the extent can also be adjusted from model view if you want to change to scale at which the model is run. This can be very useful when you need to run a model at different scales without having to rebuild it every time.
+:::
 
+### Combine datasets
+
+Next we need to generate the broader categories of land cover class that we will use in the model. The first is a collection of land cover classes with little or no vegetation. This will not be computed with the feature height data but simply assigned a negligible average carbon density value (i.e. 0.001). The second is a collection of land cover classes that contain vegetation of various kinds and which will be computed with the feature height data and an equation to estimate carbon density based on the height of vegetation.
+
+<iframe class="slide-deck" src="./slides/demo/03-03-combine-classes.html"></iframe>
 
 ### Transform data
+
+Having added the datasets and organised the land cover classes we can start to use them to generate carbon storage estimates. The basic principle is to use the land cover categories ('No vegetation' and 'Vegetation') to mask numerical data that represents an estimate of carbon stored per cell (i.e. per unit area) of each category. For simplicity we count all the land cover classes in the 'No vegetation' category as holding almost no stored carbon so we want to assign each 'No vegetation' cell the value 0.001.
+
+<iframe class="slide-deck" src="./slides/demo/03-04-transform-no-veg.html"></iframe>
+
+The next step is more complex. We now want to use the feature height (spatial numeric data) to estimate the carbon density distribution in all the 'vegetation' land cover classes. First we need to mask the feature height data with the 'vegetation' category and then we can use an equation to calculate estimates of carbon stored according to the average feature height recorded for each cell. Here is how we do it.
+
+<iframe class="slide-deck" src="./slides/demo/03-05-transform-veg.html"></iframe>
 
 ### Generate outputs
 

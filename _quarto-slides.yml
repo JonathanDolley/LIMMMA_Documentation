@@ -4,6 +4,9 @@ project:
   render:
     - "demo/03-01-open-model-view/index.qmd"
     - "demo/03-02-add-datasets/index.qmd"
+    - "demo/03-03-combine-classes/index.qmd"
+    - "demo/03-04-transform-no-veg/index.qmd"
+    - "demo/03-05-transform-veg/index.qmd"
 
 format:
   revealjs:

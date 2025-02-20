@@ -1,0 +1,47 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Now we need to join the various land cover classes into groups for use in the model. For this we add a 'union' component from the 'set operations'.](01-model-set-operations.png)
+
+---
+
+![Union takes multiple inputs and unites them into a single output.](02-model-union.png)
+
+---
+
+![We should first label it so we know what it represents.](03-model-union-label.png)
+
+---
+
+![Inputs are added by clicking and dragging from each LE land cover class to the input node of the union component.](04-model-union-bare-ground.png)
+
+---
+
+![In this case we are including all land cover classes that contain minimal or no vegetation.](05-model-union-all.png)
+
+---
+
+![We can click 'run' to set the model running...](06-model-union-run.png)
+
+---
+
+![...and see a preview of the output of the union component to make sure it is doing what we expect.](07-model-union-ran.png)
+
+---
+
+![Now we need to collect together all the land cover classes that contain vegetation. Right click the previous union component and clone it.](08-model-union-clone.png)
+
+---
+
+![Link the relevant LE classes to this union component and label it "Vegetation".](09-model-union-veg.png)
+
+---
+
+![Don't forget to save the model before going too far.](10-model-union-save.png)
+
+---
+
+![Run the model again to see the preview for the new category of land cover classes.](11-model-union-veg-ran.png)

@@ -1,0 +1,31 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![The 'Mask numeric data' component is listed under 'Arithmetic'.](01-model-arithmetic-mask.png)
+
+---
+
+![This component takes a spatial boolean input (i.e. land cover classification map) and uses it to mask a spatial numeric dataset input.](02-model-mask.png)
+
+---
+
+![Click and drag the output from the 'No vegetation' union component to the mask node of the mask component.](03-model-mask-no-veg.png)
+
+---
+
+![Now we need to add a constant to use as the numeric input.](04-model-inputs-constant.png)
+
+---
+
+![Simply specify the constant by entering a number its text input box.](05-model-constant.png)
+
+---
+
+![Enter 0.001, name it and connect it to the mask component as shown.](06-model-mask-no-veg-constant.png)
+
+---
+
+![Save and run the model to make sure it is working properly.](07-model-mask-no-veg-ran.png)

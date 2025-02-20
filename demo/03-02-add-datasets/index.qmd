@@ -25,6 +25,3 @@ format:
 ---
 
 ![We will use the 'Feature Height' model which is computed from the surface and terrain height layers.](05-model-digital-feature.png)
-
----
-

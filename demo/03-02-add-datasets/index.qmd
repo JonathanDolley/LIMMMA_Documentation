@@ -1,0 +1,30 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Select inputs and choose from the list of datasets to add to the model canvas. In this case we want the 'Living England Land Cover' dataset.](../03-01-open-model-view/06-demo-agc-model-inputs.png)
+
+---
+
+![This adds a model component that contains all the LE land cover classifications.](01-model-add-le.png)
+
+---
+
+![Next, click to add another component and select 'Digital Model' from the 'Inputs' list.](02-model-add-digital.png)
+
+---
+
+![This component outputs one of a selection of digital models which can be added to.](03-model-digital-surface-model.png)
+
+---
+
+![From the dropdown list you can select from multiple options.](04-model-digital-dropdown.png)
+
+---
+
+![We will use the 'Feature Height' model which is computed from the surface and terrain height layers.](05-model-digital-feature.png)
+
+---
+

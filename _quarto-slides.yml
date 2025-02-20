@@ -1,0 +1,10 @@
+project:
+  type: website
+  output-dir: _book/slides
+  render:
+    - "demo/03-01-open-model-view/index.qmd"
+    - "demo/03-02-add-datasets/index.qmd"
+
+format:
+  revealjs:
+    theme: [default]

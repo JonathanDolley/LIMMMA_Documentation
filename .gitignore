@@ -1,0 +1,6 @@
+/.quarto/
+*.code-workspace
+LIMMMA_Documentation.code-workspace
+/_book/
+/_slides/
+/site_libs/

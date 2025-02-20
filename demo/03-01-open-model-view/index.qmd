@@ -1,0 +1,27 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Create a new project and set the extent](01-new-project-demo-agc.png)
+
+---
+
+![Save and open the project from the project list](02-open-project-demo-agc.png)
+
+---
+
+![The project opens in map view](03-demo-agc-mapview.png)
+
+---
+
+![Click 'model view' to go the model building interface](04-select-modelview.png)
+
+---
+
+![Right click on the blank model canvas to reveal a list of components](05-demo-agc-modelview-blank.png)
+
+---
+
+![The components list includes inputs, outputs, properties, set operations etc.](06-demo-agc-model-inputs.png)

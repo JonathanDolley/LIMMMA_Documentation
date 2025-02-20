@@ -1,0 +1,27 @@
+project:
+  type: book
+  output-dir: _book
+  pre-render: quarto render --profile slides
+
+book:
+  title: "LIMMMA Documentation"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - 01-getting-started.qmd
+    - 02-key-features.qmd
+    - 03-use-agc.qmd
+    - 04-use-bgc.qmd
+    - 05-use-mfl.qmd
+    - 06-use-ai.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    lightbox: true
+
+margin-header: |
+  ![](/images/logos/LIMMMA-Logo.png)

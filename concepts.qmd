@@ -1,0 +1,42 @@
+## Basic Concepts
+
+If you are new to the idea of thinking about the landscape as a store of carbon then there are a few basic concepts you need to understand before we go any further. If you already know all about vegetative carbon and soil carbon you can skip to the next section.
+
+### Carbon Cycle
+
+As an essential element of life, carbon is taken in, stored and released by all living organisms. Through photosynthesis plants remove carbon dioxide from the air, use the carbon to grow and release oxygen back into the air. Although they also release carbon dioxide, over the course of their life cycle, plants are net consumers of carbon.
+When they die their carbon enters the soil.
+Some of this carbon becomes food for organisms in the soil and makes its way back into the air, but, under the right circumstances, a portion of it can remain there indefinitely.
+Although the amount of carbon flowing through the vegetation and soil in any landscape is constantly changing, given the right information we can estimate a snapshot the total amount of carbon stored in the landscape at a specific point in time and potentially predict the net impact of that landscape on carbon emissions over a given period of time.
+
+### Estimating Stored Carbon
+
+The first step towards making these kind of predictions is to estimate the stock of carbon stored in the landscape and map its distribution across space. Below is a visual illustration of the basic methods used to make such estimates.
+
+Imagine a landscape with a mixture of woodland, farmland, residential areas and urban/sub-urban trees and other greenery.
+
+![How much carbon is stored in this landscape?](images/03-screenshots-agc/03-01-how-much-carbon.png){group="basic-concepts"}
+
+Above the ground, carbon is stored for long periods of time in large areas of woodland, hedges and lone trees in agricultural fields as well as individual trees in amongst buildings and roads.
+Arable crops and wild grasslands store much smaller amounts of carbon for very short periods of time until their carbon is either consumed by humans or animals (to be released again to the air) or is gradually incorporated into the soil as they decompose.
+
+![Carbon stored above ground in vegetation](images/03-screenshots-agc/03-02-above-ground-carbon.png){group="basic-concepts"}
+
+Carbon in rotting plant matter from trees and other vegetation, once incorporated into the soil becomes part of the soil-carbon-cycle and a portion of it is stored for various periods of time.
+Under the right conditions, the soil can accumulate a vast store of carbon which may remain locked away for long periods of time.
+Taking account of above and below ground carbon, over the course of 100 years a native broadleaf woodland can store between 300 - 350 tonnes of carbon per hectare.[^1]
+If we convert that to an annual figure (3 - 3.5 tons) we can see that this is roughly equal to 80% of the average carbon footprint per person in the UK (4.4 tons[^2]).
+
+[^1]: https://www.woodlandtrust.org.uk/plant-trees/woodland-carbon-farmers-and-landowners/.
+[^2]: https://ourworldindata.org/co2-and-greenhouse-gas-emissions.
+
+![Carbon stored below ground in soils](images/03-screenshots-agc/03-03-below-ground-carbon.png){group="basic-concepts"}
+
+The starting point for estimating the distribution of stored carbon in a landscape is to classify it into different habitats (broadleaf woodland, coniferous woodland, grassland, arable, etc.).
+Then we assign a fixed estimate (based on field research) of the amount of carbon stored per unit of each habitat.
+
+![Estimating above ground carbon based on habitat classifications](images/03-screenshots-agc/03-04-carbon-estimates.png){group="basic-concepts"}
+
+Of course, within each habitat there are huge variations in the density and height of vegetation as well as the quantity of carbon accumulated in soils. These variations are not captured by a simple average per unit of habitat. Additional data is needed to reflect within-habitat variations, such as topography. Lidar measurements can give us an estimate of the height of trees and other vegetation and some indication of the density of vegetation. This data can then be used in equations to estimate the total vegetative carbon distribution across a single habitat such as broadleaved woodland. To supplement the habitat-based estimates we can also use AI-assisted feature detection on satellite imagery or areal imagery to identify lone trees or street trees which would otherwise not be included in the habitat classifications.
+
+Using LIMMMA we can make use of these different sources of data and try out multiple combinations of data and methods for transforming them into carbon density maps. The next section explains the different approaches demonstrated in ....

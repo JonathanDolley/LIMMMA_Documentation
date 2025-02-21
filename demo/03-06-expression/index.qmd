@@ -1,0 +1,23 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Select the 'Expression' component from the 'Arithmetic' list.](01-arithmetic-expression.png)
+
+---
+
+![This component performs an equation on a set of inputs.](02-expression-linear.png)
+
+---
+
+![You can select different expressions from the dropdown list. We will use the 'Linear carbon model' expression.](03-expression-dropdown.png)
+
+---
+
+![Link the output from the 'Vegetation feature height' mask operation to the 'height' node.](04-expression-height.png)
+
+---
+
+![Add two constants to provide the inputs to the other nodes as shown.](05-expression-scale-error.png)

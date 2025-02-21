@@ -12,24 +12,8 @@ format:
 
 ---
 
-!['Max' is listed under 'Arithmetic' components.](03-model-feature-arithmetic-max.png)
+![Now add another mask component and connect it as shown.](03-model-veg-mask.png)
 
 ---
 
-![It takes two inputs and ...](04-model-feature-max.png)
-
----
-
-![Add a numeric constant, give it the value 0.001 and connect it to one of the inputs of the Max component.](05-model-feature-max-constant.png)
-
----
-
-![Run](06-model-feature-max-ran.png)
-
----
-
-![Now add another mask component and connect it as shown.](07-model-veg-feature-ran.png)
-
----
-
-![Your model should now look like this.](08-model-fit.png)
+![Your model should now look like this.](04-model-fit.png)

@@ -7,6 +7,11 @@ project:
     - "demo/03-03-combine-classes/index.qmd"
     - "demo/03-04-transform-no-veg/index.qmd"
     - "demo/03-05-transform-veg/index.qmd"
+    - "demo/03-06-expression/index.qmd"
+    - "demo/03-07-merge/index.qmd"
+    - "demo/03-08-convert/index.qmd"
+    - "demo/03-09-outputs/index.qmd"
+    - "demo/03-10-map-view/index.qmd"
 
 format:
   revealjs:

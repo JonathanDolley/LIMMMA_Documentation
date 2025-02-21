@@ -1,0 +1,31 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![The 'Outputs' component list includes 'Save dataset' which saves a copy of the dataset to your workspace 'datasets' section and 'Map layer' which adds the output as a layer in map view](01-outputs.png)
+
+---
+
+!['Save' takes a single input while 'Map layer' includes an additional optional properties node so you can specify units to be displayed with the map layer.](02-save-layer.png)
+
+---
+
+![In this case the name you enter for each component is the name that will be attached to the output when it is saved or added to the map. It is important to choose a meaningful and consistent naming protocol for your saved datasets to make it easier to identify them for use in other projects.](03-save-layer-rename.png)
+
+---
+
+![The 'Properties' component list contains two items 'Unit' and 'Area'. We need both so add these to the model. They do not modify the data in any way, but simply add labels to the map layer.](04-properties.png)
+
+---
+
+![The 'Units' component includes a dropdown list of units to choose from. We want 't' for tons.](05-units-select.png)
+
+---
+
+!['Area' includes an equivalent list. We want 'ha' for hectares.](06-area-select.png)
+
+---
+
+![Now we simply connect the properties and the output to the relevant nodes, save and run.](07-properties-connect.png)

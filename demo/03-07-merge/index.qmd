@@ -1,0 +1,15 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Select 'Merge' from list of 'Arithmetic' components.](01-arithmetic-merge.png)
+
+---
+
+![Connect the outputs from 'Carbon (other)' and the 'Expression' components to the inputs node of the 'Merge' component and rename it "Merge above ground biomass".](02-merge-agb.png)
+
+---
+
+![Save and run the model to preview the results.](03-merge-agb-ran.png)

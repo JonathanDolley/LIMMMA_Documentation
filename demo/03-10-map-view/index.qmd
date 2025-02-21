@@ -1,0 +1,43 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Your model should now look like this. To view the results on the map click 'Map view'](01-model-map-view.png)
+
+---
+
+![The new carbon density map layer is displayed above the base street map layer in greyscale.](02-map-zoom-fit.png)
+
+---
+
+![Open the layer legend to see information about the range of values and resolution of the layer.](03-map-legend.png)
+
+---
+
+![In layer settings we can adjust the fill by selecting from a predefined list.](04-map-fill-select.png)
+
+---
+
+![Let's use 'Jet' to make the map display the range of values in a gradient of colours instead of greyscale.](05-map-fill-jet.png)
+
+---
+
+![To explore the results in more detail we can use the 'Snapshot' tool.](06-map-snapshot.png)
+
+---
+
+![The 'Snapshot' tool returns information about the map layer for a selected area which you can set directly on the map using the mouse or by clicking 'Set extent'](07-map-snapshot-extent.png)
+
+---
+
+![To snapshot the whole map layer simply select 'Use project extent'.](08-map-snapshot-project-extent.png)
+
+---
+
+![Once you have set the extent, the results are returned in a view window alongside the map.](09-map-snapshot-graph.png)
+
+---
+
+![To snapshot a new area simply hold the command key and select an area using the mouse.](10-map-snapshot-closeup.png)

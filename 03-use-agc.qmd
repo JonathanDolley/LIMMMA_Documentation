@@ -82,14 +82,34 @@ Next we need to generate the broader categories of land cover class that we will
 
 ### Transform data
 
-Having added the datasets and organised the land cover classes we can start to use them to generate carbon storage estimates. The basic principle is to use the land cover categories ('No vegetation' and 'Vegetation') to mask numerical data that represents an estimate of carbon stored per cell (i.e. per unit area) of each category. For simplicity we count all the land cover classes in the 'No vegetation' category as holding almost no stored carbon so we want to assign each 'No vegetation' cell the value 0.001.
+Having added the datasets and organised the land cover classes we can start to use them to generate carbon storage estimates. The basic principle is to use the land cover categories ('No vegetation' and 'Vegetation') to mask numerical data that represents an estimate of biomass that can then be converted into an estimate of carbon stored per cell (i.e. per unit area) for each category. For simplicity we count all the land cover classes in the 'No vegetation' category as containing no biomass and therefore holding almost no stored carbon so we want to assign each 'No vegetation' cell the value 0.001.
 
 <iframe class="slide-deck" src="./slides/demo/03-04-transform-no-veg.html"></iframe>
 
-The next step is more complex. We now want to use the feature height (spatial numeric data) to estimate the carbon density distribution in all the 'vegetation' land cover classes. First we need to mask the feature height data with the 'vegetation' category and then we can use an equation to calculate estimates of carbon stored according to the average feature height recorded for each cell. Here is how we do it.
+The next step is more complex. We now want to use the feature height (spatial numeric data) to estimate the carbon density distribution in all the 'vegetation' land cover classes. First we need to mask the feature height data with the 'vegetation' category and then we can use an equation to calculate estimates of biomass from the average feature height recorded for each cell. Here is how we do it.
 
 <iframe class="slide-deck" src="./slides/demo/03-05-transform-veg.html"></iframe>
 
+We are not finished with the vegetation category yet. To calculate an estimate of biomass based on the feature height measurements we need to use an equation from the 'Expression' component. In this example there are three expressions to choose from but it is possible to create any number of bespoke options using the 'Expressions' menu.
+
+<iframe class="slide-deck" src="./slides/demo/03-06-expression.html"></iframe>
+
+Now we have two maps of biomass: one for all land cover classes without vegetation and one for all land cover classes with vegetation. To create a single map for the whole landscape we need to merge these together.
+
+<iframe class="slide-deck" src="./slides/demo/03-07-merge.html"></iframe>
+
+Finally, we need to convert the estimate of biomass into above ground stored carbon (AGC). We will use the 'Multiply' and 'Numeric constant' components to convert to kg of carbon per m^2 and then into tons of carbon per hectare.
+
+<iframe class="slide-deck" src="./slides/demo/03-08-convert.html"></iframe>
+
 ### Generate outputs
 
+Now we have a model that generates a density map for above ground vegetative carbon we need to translate this into outputs for the map view and for use in other projects.
+
+<iframe class="slide-deck" src="./slides/demo/03-09-outputs.html"></iframe>
+
 ## Exploring outputs
+
+Switching to 'Map view' we can explore the new map layer visually alongside other map layers and also use the 'Snapshot' tool to view information for selected areas.
+
+<iframe class="slide-deck" src="./slides/demo/03-10-map-view.html"></iframe>

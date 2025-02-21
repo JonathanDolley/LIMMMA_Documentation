@@ -1,0 +1,27 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![The 'Multiply' component can be found in the list of 'Arithmetic' components.](01-arithmetic-multiply.png)
+
+---
+
+![We need to add the 'Multiply' component and a 'Numeric constant' to use as the multiplier.](02-multiply-constant.png)
+
+---
+
+![Rename the 'Multiply' component as "Carbon Storage (kg/m^2)" and the 'Numeric constant' to "From AGB to Carbon Storage" and enter the value 0.47.](03-multiply-constant-rename.png)
+
+---
+
+![Connect the merged AGB dataset and the numeric constant to the 'Multiply' component A and B nodes.](04-multiply-constant-connect.png)
+
+---
+
+![Now we repeat the operation to convert to tons of carbon per hectare as shown.](05-multiply-second-time.png)
+
+---
+
+![The previews indicate that each step is working properly.](06-convert-ran.png)

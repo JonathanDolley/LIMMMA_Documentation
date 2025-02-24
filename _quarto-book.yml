@@ -8,8 +8,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - 01-getting-started.qmd
-    - 02-key-features.qmd
+    - 01-key-features.qmd
+    - 02-getting-started.qmd
     - 03-use-agc.qmd
     - 04-use-bgc.qmd
     - 05-use-mfl.qmd

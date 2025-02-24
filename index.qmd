@@ -1,4 +1,35 @@
-# Preface {.unnumbered}
+---
+toc: false
+navbar: false
+---
 
+# About this book {.unnumbered}
 
+The University of Sussex LIMMMA tool is a web-application designed for supporting bespoke decision making on land use and land management strategies in the context of uncertainty. It looks something like this:
 
+![LIMMMA consists of a map screen and model screen through which the user can interact with projects on specific geographical areas (extents) to generate outputs in the form of maps and datasets.](images/project-extent-map-model-output.png)
+
+Our purpose with this tool is to enable specialists and non-specialists to engage more quickly and easily with the evidence, assumptions and uncertainties involved in developing, selecting and monitoring land management options. There are at least four types of user we have in mind:
+
+> ***1. Small Research Teams***
+>
+> Scientific teams like Kew Science are doing field-based research and biophysical modelling to understand the relationships between carbon storage, biodiversity and landscape management practices. They need to be able to easily iterate between emerging data and evolving models while comparing results between different models at various scales.
+>
+> ***2. Large Multi-site Research Projects***
+>
+> Large scale multi-site research projects such as the Nature Returns pilot nature base solutions (NBS) are seeking to understand how interventions can restore and create habitats to obtain multiple benefits for nature and people at the landscape scale. They need to be able to integrate diverse types of geospatial data into models and maps for complex analysis while also making outputs and evidence accessible to other expert and non-expert stakeholders alike.
+>
+>  ***3. Practitioners***
+>
+> Practitioners such as the Local Nature Recovery Strategy (LNRS) teams are designing landscape wide strategies for nature recovery projects in consultation with communities. They need opportunity maps that can be readily improved with input from local stakeholders and which provide transparency over candidate site selection. They also need to be able to bring together multiple datasets, models and maps from other planning and policy units so that local site-level assessments and plans can be understood in the wider context.
+>
+> ***4. Communities***
+>
+> Local communities - residents, farmers, advocacy groups, councils etc. - are the ones most directly affected by policies and interventions around land-use change and landscape management and they are critical to the success of any landscape scale strategies. They need to be able to gather local evidence and create their own bespoke maps to convey their experience of and vision for nature recovery and NBS projects in their localities. These can help to amplify local community voices in planning, implementation, monitoring and evaluation of projects and support the democratisation of landscape planning.
+
+Aimed at these four audiences, this book of documentation introduces the LIMMMA tool, outlines its key features and explains how it can be used in a number of example use-cases with a step-by-step walkthrough for each case.
+The introduction describes the development of LIMMMA over several years by a multidisciplinary team at the University of Sussex and puts in a wider context of ongoing transdisciplinary research to which it contributes.
+Chapter 1 outlines the key features
+Chapter 2 takes the reader from zero to the basics of how to set up an account, create a new project and add map layers.
+Chapters 3, 4 and 5 detail three specific use cases to demonstrate how the tool can be used in each case.
+Finally, chapter 6 gets into the more technical detail about how the AI component is used to support land use classifications.

@@ -1,1 +1,44 @@
 # Use Case 3: Multifunctional Landscape Analysis
+
+Carbon density maps provide only one part of the evidence required for landscape management and planning strategies.
+In addition to understanding the impact of land management practices and land use change on carbon storage and emissions, it is also important recognise the multiple impacts on biodiversity and various other ecosystem services such as flood prevention, food and water supply, cultural and recreational benefits etc.
+These direct environmental implications of planning projects need to be understood alongside the economic and social benefits associated with them so that holistic strategies for land use change can take account of the diverse interests of multiple stakeholders.
+
+For example, it makes sense to develop Local Nature Recovery Strategies (LNRS) based not only on a wide range of biophysical information (carbon, biodiversity, habitat quality and connectivity, flood risk etc.) but also in connection with other land use policies which have implications for the LNRS.
+The Strategic Housing and Economic Land Availability Assessments (SHELAA) carried out by district authorities identify plots of land suitable for housing and commerical development.
+The Biodiversity Net Gain (BNG) legislation, on the other hand, requires new developments to replace lost habitats with on and off site habitat creation or improvements.
+By integrating map outputs from sources such as SHELAA and BNG analysis with carbon density and other biodiversity datasets in LIMMMA we can begin to create a platform to support LNRS consultations involving decision makers, community stakeholders and researchers.
+LIMMMA can thus enable a collaborative process of developing opportunity maps for LNRS and support ongoing monitoring of the implementation and impacts of individual projects across the landscape.
+
+Working with Wealden District Council and the Sussex LNRS we have begun to explore the potential for such an approach and to design new features which can be added to LIMMMA to facilitate these type of collaborative processes.
+Here we present a series of demonstration projects in LIMMMA which illustrate the power and flexibility for using the tool in multifunctional landscape analysis.
+
+## Creating opportunity maps
+
+Fragmented woodland.
+
+Housing expansion.
+
+Combine.
+
+## Estimating potential environmental impacts
+
+Using carbon density maps with opportunity maps.
+
+Adding BNG?
+
+## Creating bespoke layers
+
+Example of Brighton green space.
+
+## Adding multiple values
+
+Example of imagined Brighton NBS.
+
+## Visualising trade-offs
+
+Showing bar graph matrix.
+
+## Comparing scenarios
+
+Not sure yet... Gamification bit?

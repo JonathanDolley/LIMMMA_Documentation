@@ -1,0 +1,100 @@
+# Key Features
+
+Our purpose in developing the LIMMMA tool is to support landscape management and planning by accelerating engagement with emerging evidence in transparent ways. The tool is designed to be flexible, accessible and extendable. It's flexibility means it can be tailored to a diversity of use cases such as mapping carbon storage and flux, biodiversity impacts, nature based solution opportunity maps, social-ecological outcomes of land-use change etc. Accessibility is vital to ensure that it is not an exclusive tool for experts but can be used by non-experts and can be used to make analysis transparent to a diversity of stakeholders. Finally, LIMMMA is designed to be readily extendable as new use cases are found and as new features are required.
+
+The currently live key features are as follows:
+
+1. Work with multiple datasets and map layers and add new data as required.
+2. Design multiple models and compare results almost instantaneously as new map layers.
+3. Keep modelling methods and assumptions transparent to other users and stakeholders.
+4. Visualise and communicate uncertainty in multiple ways.
+5. Run models at a variety of scales and explore the predictive limits of models at different scales.
+6. Extrapolate and refine models using data gathered in the field.
+7. Explore implications of land-use change over time and space.
+8. Enhance maps and models with AI and Machine Learning.
+9. Combine biophysical and socio-economic data outputs from multiple models into composite models for analysis of multifunctional landscapes.
+
+This chapter illustrates each of these key features with screenshots from live projects.
+
+## Datasets and Map Layers
+
+The default view in a LIMMMA project is 'Map view' with a pre-loaded Open Street Map layer so the user can easily orientate themselves.
+Other map layers can be added to a project's Map view simply by selecting from a list of available layers of different types.
+
+![LIMMMA Map view showing UKCEH land-cover map for UK.](images/01-screenshots-key/01-mapview-layers.png)
+
+The current live version of LIMMMA includes by default the following open datasets for use by any team:
+
+- Ancient Tree Inventory - *hyperlinked point data.*
+- Designations including (e.g. of ancient woodland, AONB) - *vector data.*
+- OS Boundaries (e.g. district councils, historic counties) - *vector data.*
+- NEVO model output maps - *raster data.*
+- ORVal (e.g. paths, beaches, access points) - *vector and point data.*
+- Indices of Multiple Deprivation - *vector data.*
+- UKCEH Land Cover Maps - *converted from vector to raster.*
+- CROME Crop Map of England - *hexagonal tessellation.*
+- plus any new datasets created by members of your team for private use within your team.
+
+However, this is not the limit of data that can be used with LIMMMA. The back end of the software allows for a technical support team to import additional datasets of almost any type for use as map layers and in the modelling function. For example, over the course of our most recent research project we have imported additional layers into our Central Sussex workspace on LIMMMA. They include the following map layers to be directly added to Map view:
+
+- Soil samples and tree crown measurements from Kew Wakehurst - *multidimensional point data with additional metadata.*
+- Natmap Soil Carbon datasets - *multidimensional raster data.*
+- High resolution aerial imagery for an area of Sussex.
+
+And also a selection of datasets for use in models which can in turn  be added to Map view as model outputs:
+
+- Living England Land Cover Maps - *converted from vector to raster.*
+- Digital terrain model LIDAR Maps - *hi-res raster data.*
+- OS Green Spaces Maps - *vector data.*
+- UK Census Data - *multidimensional vector data.*
+- ISRIC Soil Data - *multidimensional raster data.*
+- Biodiversity survey data. - *multidimensional point data.*
+
+## Models and Outputs
+
+These map layers and datasets can be combined in a variety of ways to create models built using LIMMMA's integrated graphical modelling interface in 'Model view.'
+
+![Alt text](images/01-screenshots-key/02-modelview-cstore.png)
+
+Model outputs can be added to the project's map view as new map layers and also saved to a database within your team's workspace for use in other projects and models.
+
+## Transparent Assumptions and Methods
+
+The model view interface is designed to enable users to create models that are relatively transparent, easily reproducible and make the modelling assumptions as obvious as possible to other users. This is achieved by using pre-configured graphical components which each display previews of the operation they perform. The user selects components from a list of different types and links them together to build more complex operations. The preview feature provides the additional advantage of making errors in method and data easier to detect and pinpoint throughout the model building process.
+
+![Alt text](images/01-screenshots-key/03-modelview-method.png)
+
+## Visualising Uncertainty
+
+Carbon stuff comes in here in support of science team.
+
+![Alt text](images/01-screenshots-key/04-uncertainty.png)
+
+![Alt text](images/01-screenshots-key/04-uncertainty-2.png)
+
+## Scaling Models
+
+Relate to policy implications.
+
+![Alt text](images/01-screenshots-key/05-scaling.jpg)
+
+## Extrapolation and Ground Truthing
+
+If working on pilot sites across the uk this can help you share your data etc. Supporting teams of scientists across multiple sites.
+
+![Alt text](images/01-screenshots-key/06-extrapolation.jpg)
+
+## Land-use Change Implications
+
+Two types of what if
+1. Regional and National level what if? What it we planted more trees of this type in this area and how would that influence carbon AND community.
+
+![Alt text](images/01-screenshots-key/07-implications.jpg)
+
+2. Community level what ifs? Local land-use plans.
+
+## AI-assisted Land-use Land-cover Mapping
+
+![Alt text](images/01-screenshots-key/08-ai-assisted.jpg)
+
+## Composite Models for Multifunctional Landscape Analysis

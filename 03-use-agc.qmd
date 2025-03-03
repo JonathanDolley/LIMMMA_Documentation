@@ -7,8 +7,7 @@
 
 # Use Case 1: Above Ground Carbon
 
-As part of the Nature Returns research project with Natural England, the LIMMMA team worked with Kew Science on landscape-based carbon storage modelling.
-This involved using habitat maps, remote sensing data and equations for estimating the amount of carbon stored above ground (in vegetation such as trees and hedgerows) and below ground (in soils) across a diverse landscape of woodland, grassland and built up areas at different scales including 1) Wakehurst site, 2) Wealden District Council, 3) Southeast England with potential to be scaled nationally.
+[Kew science](https://www.kew.org/science/nature-returns) are carrying out detailed empirical studies at Wakehurst to improve understanding of the amount of carbon stored in particular habitats and the factors that influence it. The case study in LIMMMA was to compare and contrast models of carbon storage, bringing in refinements from the Kew work in 'real time', being able to visualise uncertainties in both data sets and models. We aimed to utilise these latest empirical insights in LIMMMA to support the creation of models of carbon storage that could be scaled up from local to national level; complementing and comparing with those models and outputs currently in use. Outputs could be examined alongside existing estimates of carbon storage making both the uncertainties involved and limits to scaling clear. The principles apply to many other ongoing initiatives to enhance understanding of carbon storage.
 
 In the following walkthrough we demonstrate how the above ground carbon models were created and tested using LIMMMA.
 

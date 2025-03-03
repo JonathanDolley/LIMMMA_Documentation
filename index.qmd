@@ -5,51 +5,65 @@ navbar: false
 
 # Introduction {.unnumbered}
 
-The University of Sussex LIMMMA tool is designed to contribute to the timely and effective use of evidence for collaborative sustainable multifunctional land use. Our central aims in developing this tool are to:
+The University of Sussex LIMMMA tool is designed to contribute to the timely and effective use of evidence for collaborative sustainable multifunctional land use. Our central aims in developing this tool are to complement the growing number of decision support tools and landscape modelling approaches by:
 
-- support the rapid sharing and analysis of new data and model developments that have implications for sustainable land use  policy and land management practices;
-- support efforts to scale up and extrapolate from new empirical findings as appropriate;
-- support engagement with the uncertainties involved and comparisons with existing data sets and model outputs to inform bespoke decision making;
-- to enable specialists and non-specialists to engage more quickly and easily with the evidence, assumptions and uncertainties involved in developing, selecting and monitoring land management options.
+- supporting the rapid sharing, analysis and comparison of new data and model developments that have implications for sustainable land use  policy and land management practices;
+- supporting efforts to scale up and extrapolate from new empirical findings as appropriate;
+- supporting engagement with the uncertainties involved and comparisons with existing data sets and model outputs to inform bespoke decision making;
+- enabling specialists and non-specialists to engage more quickly and easily with the evidence, assumptions and uncertainties involved in developing, selecting and monitoring land management options.
 
-## What is LIMMMA and who is it for? {.unnumbered}
+## Current applications of LIMMMA {.unnumbered}
+
+Examples of interest groups and potential uses of LIMMMA for nature recovery include (but are not limited to):
+
+> ***1. Scientific Research Teams carrying out empirical studies to improve understanding of landscape function***
+>
+> Many scientific teams are doing field-based research and biophysical modelling to understand the relationships between the changing function and value of landscapes and management practices to meet net zero, biodiversity targets and other sustainability goals. LIMMMA provides a platform to:
+>
+> - visualise, analyse and share findings as they emerge;
+> - run models derived from empirical findings across different scales (for example factors influencing carbon storage for particular habitats);
+> - compare outputs of new models against established ones currently used in land-use decision making;
+> - explore uncertainty in datasets and models;
+> - support dialogue at the science policy interface.
+>
+> Large scale multi-site research projects such as the [Nature Returns](https://publications.naturalengland.org.uk/publication/5924090708492288) programme work at multiple pilot sites, seeking to understand how nature based solution interventions can restore and create habitats to obtain multiple benefits for nature and people at the landscape scale. For this type of initiative LIMMMA can help with sharing the data across sites and learning together rapidly with multi-site visualisation and analysis. It provides a way to integrate diverse types of geospatial data into models and maps for complex analysis while also making outputs and evidence accessible to other expert and non-expert stakeholders alike. 
+>
+> LIMMMA enables the possibility of using a single model and consistent data sources at very high resolution for local areas, and simultaneously at regional or national levels making it easier to model the potential impact of land use decisions across different scales (see [link to carbon report]()) and to explore the limits to scaling of particular models.
+>
+> ***2. Practitioners***
+>
+> Practitioners such as the [Local Nature Recovery Strategy (LNRS) teams](https://www.sussexnaturerecovery.org.uk) are designing landscape wide strategies for nature recovery projects in consultation with communities. They need opportunity maps that can be readily improved with input from local stakeholders and which provide transparency over candidate site selection. LIMMMA has the potential to help by:
+>
+> - bringing together multiple datasets, models and maps from other planning and policy units into a single platform;
+> - allowing "real-time" updates to maps as new evidence and models emerge; 
+> - enabling maps to be augmented with other local monitoring datasets and stakeholder inputs for context-appropriate planning;
+> - supporting participatory monitoring and feedback of nature recovery interventions;
+> - looking at synergies and trade-offs across scales and between land-use priorities - for example local site-level assessments and plans can be understood in the wider context of housing and food security priorities.
+>
+> ***3. Communities***
+>
+> Local communities - residents, farmers, advocacy groups etc. - represent a rich reservoir of local knowledge that is vital to successful landscape management. Building on experience from our earlier community focused work ([ESPA](https://www.espa.ac.uk/projects/ne-l001292-1), [Inclusive Green Infrastructures](https://agri-food-transformations.netlify.app/)) and through our [new collaboration](https://www.gcbc.org.uk/project/exploring-sustainable-land-use-pathways-for-ecosystems-food-security-and-poverty-alleviation-opportunities-for-indonesias-food-estate-programme/) with Monash University Indonesia we are keen to develop the capabilities of LIMMMA to support citizen science and the gathering of local evidence on landscape function and value to create bespoke maps. These could be applied within planning processes to convey local communities' experience of and vision for nature recovery and NBS projects in their localities. This democratisation of landscape planning (which recognises the diversity of biophysical and socio-cultural landscape values) is central to strong community engagement and achieving realistic and lasting interventions.
+
+## The LIMMMA Tool
 
 In the simplest technical terms, LIMMMA is a web-application with mapping and modelling functions and a growing set of built-in datasets which can be augmented with additional data layers generated or owned by users themselves. It consists of a map screen and model screen through which the user can interact with projects on specific geographical areas (extents) to generate outputs in the form of maps and datasets.
 
 ![LIMMMA web-app structure and interfaces](images/project-extent-map-model-output.png)
 
-There are at least four types of user we have in mind:
+One key aspect of our overall vision is to develop the LIMMMA tool into a 'virtual living lab for multifunctional landscapes' that would provide a basis for bringing formal science and other insights together as a common resource. It would enable a coalition of research and practitioner teams to progressively build up an understanding and visualisation of the changing function and values of landscapes. It could provide a platform for participatory assessment of the implications of different land use interventions, integrated with dynamic maps that are updated with new evidence and stories of change. By facilitating engagement between scientists, practitioners, communities and policy makers, such a virtual living lab would support a more responsive and participatory strategy for multifunctional landscapes. Towards this goal, we are beginning to work with stakeholders to scope this initiative out within a specific area in the south coast region (see map below).
 
-> ***1. Scientific Research Teams seeking to improve models of landscape function***
->
-> Scientific teams like [Kew Science](https://www.kew.org/science) are doing field-based research and biophysical modelling to understand the relationships between carbon storage, biodiversity and landscape management practices. They need to be able to easily iterate between emerging data and evolving models while comparing results between different models at various scales. As understanding of the potential implications of these models for land use decision making evolve, LIMMMA can provide a platform to visualise the results, scale up findings as appropriate and support dialogue at the science policy interface.
->
-> ***2. Large Multi-site Research Projects***
->
-> Large scale multi-site research projects such as the Nature Returns works at multiple pilot sites, seeking to understand how nature based solution interventions can restore and create habitats to obtain multiple benefits for nature and people at the landscape scale. LIMMMA can help with sharing the data across sites and learning together rapidly with multi-site visualisation and analysis They need to be able to integrate diverse types of geospatial data into models and maps for complex analysis while also making outputs and evidence accessible to other expert and non-expert stakeholders alike. 
->
-> ***3. Practitioners***
->
-> Practitioners such as the Local Nature Recovery Strategy (LNRS) teams are designing landscape wide strategies for nature recovery projects in consultation with communities. They need opportunity maps that can be readily improved with input from local stakeholders and which provide transparency over candidate site selection. They also need to be able to bring together multiple datasets, models and maps from other planning and policy units so that local site-level assessments and plans can be understood in the wider context.
->
-> ***4. Communities***
->
-> Local communities - residents, farmers, advocacy groups, councils etc. - are the ones most directly affected by policies and interventions around land-use change and landscape management and they are critical to the success of any landscape scale strategies. They need to be able to gather local evidence and create their own bespoke maps to convey their experience of and vision for nature recovery and NBS projects in their localities. These can help to amplify local community voices in planning, implementation, monitoring and evaluation of projects and support the democratisation of landscape planning.
-
-Our vision is to develop the LIMMMA tool into a 'virtual living lab for multifunctional landscapes' that would provide a basis for bringing formal science and other insights together as a common resource. It would enable a coalition of research and practitioner teams to progressively build up an understanding and visualisation of the changing function and values of landscapes. It could provide a platform for participatory assessment of the implications of different land use interventions, integrated with dynamic maps that are updated with new evidence and stories of change. By facilitating engagement between scientists, practitioners, communities and policy makers, such a virtual living lab would support a more responsive and participatory strategy for multifunctional landscapes. Towards this goal, we are beginning to work with stakeholders to scope this initiative out in particular places beginning with the Wealden District Council area in the south coast region (see map below).
-
-![Wealden District Council](images/index-intro/wealden-district-council.jpg)
+![Central sussex as a potential virtual living lab](images/index-intro/central-sussex.png)
 
 This book of documentation introduces the LIMMMA tool, outlines its key features and explains how it can be used in a number of example use-cases with a step-by-step walkthrough for each case.
-The introduction describes the development of LIMMMA over several years by a multidisciplinary team at the University of Sussex and puts in a wider context of ongoing transdisciplinary research to which it contributes.
-Chapter 1 outlines the key features
-Chapter 2 takes the reader from zero to the basics of how to set up an account, create a new project and add map layers.
+Chapter 1 outlines the key features while Chapter 2 takes the reader from zero to the basics of how to set up an account, create a new project and add map layers.
 Chapters 3, 4 and 5 detail three specific use cases to demonstrate how the tool can be used in each case.
 Finally, chapter 6 gets into the more technical detail about how the AI component is used to support land use classifications.
 
-If you want to know more about the history and development of the project before going further you can read about it in the section below. Otherwise, if you want to learn about the tool itself, please head straight to chapter 1.
+If you want to know more about the history and development of the project before going further you can read about it in the section below. Otherwise, if you want to learn about the tool itself, please head straight to Chapter 1.
 
 ## Background and acknowledgements {.unnumbered}
+
+(placeholder): add in details of our long-term interdisciplinary research on multifunctional landscape initiatives and challenges of integrating evidence and perspectives across scales, multiple perspectives and diverse values.
 
 The University of Sussex [LIMMMA](https://landscapes.wearepal.ai/) tool (Landscape Integrative Mapping and Modelling for Multifunctional Analysis) is an evolving project that began in 2017 with a new multi-disciplinary collaboration between the University's Science Policy Research Unit ([SPRU](https://www.sussex.ac.uk/business-school/people-and-departments/spru)) and the Predictive Analytics Lab ([PAL](https://wearepal.ai)) within the Informatics department.
 

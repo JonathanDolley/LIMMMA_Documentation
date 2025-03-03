@@ -13,12 +13,11 @@ In the following walkthrough we demonstrate how the above ground carbon models w
 
 ## Methodologies and Datasets
 
-Our aim in this project was to create a workflow for generating and improving geospatial estimates of the amount of carbon stored above ground in the natural landscape which met the following requirements:
+We worked in partnership with Kew Science to develop a workflow for generating and improving geospatial estimates of the amount of carbon stored above ground in the natural landscape which met the following requirements:
 
-1. Use open access national datasets.
-2. Scaleable from local to national.
-3. Easily compare across different models at different scales.
-4. Rapidly improve with new data, equations (e.g. allometric) and methodologies as they emerge from ongoing research.
+1. Informed by new data, equations (e.g. allometric) and methodologies as they emerge from ongoing research.
+2. Scaleable from local to national using open access national datasets.
+3. Supports comparison of different models across multiple scales.
 
 The data and methods adopted are summarised in the following diagram.
 

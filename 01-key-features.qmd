@@ -117,7 +117,7 @@ Now consider a situation in which you want to quantify and visualise the discrep
 
 ![Calculating discrepancies between datasets or model outputs](images/01-screenshots-key/06-difference-model.png)
 
-When the output is added to Map View it provides clear picture of where the two soil maps disagree about the amount of soil organic carbon and by how much.
+When the output is added to Map View it provides a clear picture of where the two soil maps disagree about the amount of soil organic carbon and by how much.
 
 ![Displaying discrepancies between datasets or model outputs](images/01-screenshots-key/07-difference-map.png)
 
@@ -127,15 +127,27 @@ Creating opportunity maps and risk maps which display specific locations that ma
 
 ![A model to generate opportunity maps](images/01-screenshots-key/08-opportunity-model.png)
 
-In Map View you can see how the model is designed to highlight areas with higher or lower priority for woodland expansion (in this case based on several parameters including proximity to existing ancient woodlands and location in catchments).
+In ***Map View*** you can see how the model is designed to highlight areas with higher or lower priority for woodland expansion (in this case based on several parameters including proximity to existing ancient woodlands and location in catchments).
 
 ![Example of an opportunity map](images/01-screenshots-key/09-opportunity-map.png)
 
 ## Scaling Models 
 
-Relate to policy implications.
+Having built a model to create a map at one scale it is a simple task to run that same model at multiple other scales as long as the relevant data is available.
 
-![Alt text](images/01-screenshots-key/05-scaling.jpg)
+![Generating model outputs at multiple scales](images/01-screenshots-key/10-scaling.jpg)
+
+From within ***Model View*** the project extent can be changed with a few clicks allowing the user to re-run the same model to generate new outputs for any location and at any zoom level from field-level to national scale and beyond.
+
+![Changing project extent to re-run models at different scales](images/01-screenshots-key/11-zoom-levels.jpg)
+
+Due to the limitations of processing power, as the area analysed by the model increases the resolution of data used in the model decreases. This relationship is expressed in terms of 'zoom levels.' At the highest zoom level (24) each cell of the model is approximately 1.5 x 1.5 metres (with an area of around 2.25 m²) and a model at this resolution can be run over an area of around 6-7 km², an area the size of Wakehurst for example.
+
+![A carbon storage model run at zoom level 24 over Wakehurst](images/01-screenshots-key/12-zoom-24-wkh.png)
+
+At zoom level 16 a model can cover the entire United Kingdom. In this case each cell of the model would be 354 x 354 metres and cover an area roughly 125,437 m² per cell.
+
+![The same carbon model run at zoom level 16 over the entire UK](images/01-screenshots-key/13-zoom-16-uk.png)
 
 ## Extrapolation and Ground Truthing
 

@@ -2,9 +2,9 @@
 
 ## Setting up a new project
 
-![Projects](images/02-screenshots-start/01-01-Projects.png)
+![Placeholder image](images/02-screenshots-start/01-01-Projects.png)
 
-![Extent](images/02-screenshots-start/01-02-Extent.png)
+![Placeholder image](images/02-screenshots-start/01-02-Extent.png)
 
 ### Create an account
 

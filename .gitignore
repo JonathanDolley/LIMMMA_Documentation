@@ -1,6 +1,7 @@
+.DS_Store
 /.quarto/
 *.code-workspace
-LIMMMA_Documentation.code-workspace
+*.code-workspace
 /_book/
 /_slides/
 /site_libs/

@@ -23,38 +23,37 @@ Other map layers can be added to a project's Map view simply by selecting from a
 
 ![LIMMMA Map view showing UKCEH land-cover map for UK.](images/01-screenshots-key/01-mapview-layers.png)
 
-The current live version of LIMMMA includes by default the following open datasets for use by any team:
+The current live version of LIMMMA includes by default the following open datasets for use by any team either in Map View or in the Model View interface:
 
-- Ancient Tree Inventory - *hyperlinked point data.*
+- [Ancient Tree Inventory](https://ati.woodlandtrust.org.uk/) - *hyperlinked point data.*
 - Designations including (e.g. of ancient woodland, AONB) - *vector data.*
+- [OpenStreetMap Land Use](https://wiki.openstreetmap.org/wiki/Key:landuse) - *vector data.* 
 - OS Boundaries (e.g. district councils, historic counties) - *vector data.*
-- NEVO model output maps - *raster data.*
-- ORVal (e.g. paths, beaches, access points) - *vector and point data.*
-- Indices of Multiple Deprivation - *vector data.*
-- UKCEH Land Cover Maps - *converted from vector to raster.*
-- CROME Crop Map of England - *hexagonal tessellation.*
+- OS Green Spaces.
+- [NEVO](https://www.leep.exeter.ac.uk/nevo/documentation/) model output maps - *raster data.*
+- [ORVal](https://www.leep.exeter.ac.uk/orval/) (e.g. paths, beaches, access points) - *vector and point data.*
+- [Indices of Multiple Deprivation](https://data.cdrc.ac.uk/dataset/index-multiple-deprivation-imd) - *vector data.*
+- [UKCEH Land Cover Maps](https://www.ceh.ac.uk/data/ukceh-land-cover-maps) for 2021, 2022 and 2023 - *converted from vector to raster.*
+- [Living England Land Cover](https://naturalengland.blog.gov.uk/2022/04/05/living-england-from-satellite-imagery-to-a-national-scale-habitat-map/) - *converted from vector to raster.*
+- [CROME Crop Map of England 2021](https://www.data.gov.uk/dataset/aaedb588-fc86-498f-acab-5fa1b261fdd5/crop-map-of-england-crome-2021) - *hexagonal tessellation.*
+- [Natural Biodiversity Network Trust Atlas](https://nbnatlas.org/).
+- UK Census 2021 - *multidimensional vector data.*
+- [ISRIC Soil Data](https://www.isric.org/).
 - plus any new datasets created by members of your team for private use within your team.
 
-However, this is not the limit of data that can be used with LIMMMA. The back end of the software allows for a technical support team to import additional datasets of almost any type for use as map layers and in the modelling function. For example, over the course of our most recent research project we have imported additional layers into our Central Sussex workspace on LIMMMA. They include the following map layers to be directly added to Map view:
+However, this is not the limit of data that can be used with LIMMMA. The back end of the software allows for a technical support team to import additional datasets of almost any type for use as map layers and in the modelling function. For example, over the course of our most recent research project we have imported additional layers into our Central Sussex workspace on LIMMMA. They include the following:
 
 - Soil samples and tree crown measurements from Kew Wakehurst - *multidimensional point data with additional metadata.*
 - Natmap Soil Carbon datasets - *multidimensional raster data.*
 - High resolution aerial imagery for an area of Sussex.
-
-And also a selection of datasets for use in models which can in turn  be added to Map view as model outputs:
-
-- Living England Land Cover Maps - *converted from vector to raster.*
 - Digital terrain model LIDAR Maps - *hi-res raster data.*
-- OS Green Spaces Maps - *vector data.*
-- UK Census Data - *multidimensional vector data.*
-- ISRIC Soil Data - *multidimensional raster data.*
-- Biodiversity survey data. - *multidimensional point data.*
+- Hedgerow maps.
 
 ## Models and Outputs
 
 These map layers and datasets can be combined in a variety of ways to create models built using LIMMMA's integrated graphical modelling interface in 'Model view.'
 
-![Alt text](images/01-screenshots-key/02-modelview-cstore.png)
+![Example of an above ground carbon model in Model View](images/01-screenshots-key/02-modelview-cstore.png)
 
 Model outputs can be added to the project's map view as new map layers and also saved to a database within your team's workspace for use in other projects and models.
 
@@ -62,17 +61,77 @@ Model outputs can be added to the project's map view as new map layers and also 
 
 The model view interface is designed to enable users to create models that are relatively transparent, easily reproducible and make the modelling assumptions as obvious as possible to other users. This is achieved by using pre-configured graphical components which each display previews of the operation they perform. The user selects components from a list of different types and links them together to build more complex operations. The preview feature provides the additional advantage of making errors in method and data easier to detect and pinpoint throughout the model building process.
 
-![Alt text](images/01-screenshots-key/03-modelview-method.png)
+![Interacting with model components in Model View](images/01-screenshots-key/03-modelview-method.png)
 
-## Visualising Uncertainty
+## Visualising Uncertainty, Opportunities and Risk
 
-Carbon stuff comes in here in support of science team.
+In addition to loading datasets and generating map outputs, LIMMMA's modelling interface also provides components which enable the user transform different types of data in various ways. Using these components in combination, a user can create new kinds of maps to, for example, visualise uncertainty in various ways or to create opportunity and risk maps to support landscape management and planning.
 
-![Alt text](images/01-screenshots-key/04-uncertainty.png)
+### Set operations {.unnumbered}
 
-![Alt text](images/01-screenshots-key/04-uncertainty-2.png)
+The group of model components called "Set operations" enable the user to manipulate the LULC (land-use land-cover) datasets to generate new derivative or composite LULC classes.  The LULC datasets are in the form of boolean grids - a georeferenced matrix of cells, each with a value of either TRUE or FALSE indicating spatially where one specific type of land use or land cover is or is not present. The set operations take these LULC grids as inputs and create a new LULC grid as their output, having performed one of the following set operations:
 
-## Scaling Models
+- ***Union*** joins two LULC classes (A and B) into a new LULC class in which the value TRUE now represents the entire area covered by both inputs (i.e. if a cell is TRUE in A or B or in both it will be TRUE in the output). 
+
+::: {.callout-tip}
+For example, you could use Union to combine two or more types of vegetation classes (forest, grass, arable etc.) into a new LULC set representing all vegetation in the landscape as a single class.
+:::
+
+- ***Intersection*** creates a new LULC class corresponding to the overlap between the two inputs and returning FALSE for every cell in which the two inputs do not overlap (i.e. if a cell is TRUE in A and B it will be TRUE in the output while all other cells will be FALSE).
+
+::: {.callout-tip}
+You might use Intersection to create a new sub-class of Coniferous Woodland which coincides with the areas covered by AONB or National Parks.
+:::
+
+- ***Set difference*** creates a new LULC class corresponding to the area that is unique to the specified input (i.e. a cell will only be TRUE in the output if it is TRUE in input A and FALSE in input B).
+
+::: {.callout-tip}
+This operation is useful for identifying locations where two different land cover classification maps disagree or for revealing the changes in land use or land cover between two points in time.
+:::
+
+- ***Symmetric difference*** creates a new LULC class corresponding to the area covered by two input classes with the exception of where they overlap (i.e. a cell will only by TRUE in the output if it is TRUE in either input A or input B but no TRUE in both).
+
+- ***Complement*** creates a new LULC class corresponding to the area NOT covered by the input class (i.e. if a cell is TRUE in the input set it will be FALSE in the output and *vice versa*).
+
+::: {.callout-tip}
+For example, you might want to exclude all grassland cover in conservation areas from your opportunity map for projects to create new woodland.
+:::
+
+### Arithmetic components {.unnumbered}
+
+"Arithmetic" components are used to perform calculations on numeric grid data - a georeferenced matrix of cells, each with a number value instead of a boolean value. These include a range of simple operations such as add, subtract, and divide, a merge operation and a bespoke expression component which allows the user to select from a list of pre-built equations to allow for more complex calculations. These type of components are key to building models which estimate carbon storage, for example, but are also useful for quantifying the discrepancies between outputs from different models.
+
+### Revealing sources of uncertainty {.unnumbered}
+
+Here is an example of using the ***Union*** and ***Set difference*** components to create a map showing the disagreement between the UKCEH and the Living England Land Cover maps over classifying vegetation and non-vegetation land cover classes.
+
+![Using set operation components](images/01-screenshots-key/04-set-operations-difference.png)
+
+In ***Map View*** the final output of these set operations can be viewed as a new layer which reveals the potential sources of error derived from the different habitat mapping methods used to create the UKCEH and LE habitat datasets. This type of uncertainty map allows the user to pinpoint those locations where carbon estimates are subject to a higher degree of uncertainty.
+
+![replace with better image from project](images/01-screenshots-key/05-uncertainty.png)
+
+### Quantifying discrepancies between models {.unnumbered}
+
+Now consider a situation in which you want to quantify and visualise the discrepancies between competing approaches to modelling a particular environmental variable such as carbon storage or indicators of soil health or biodiversity. Using the subtract component the user can map the differences in value estimates generated by two separate models for each cell in a numerical grid. Below is fragment from one such model which calculates the difference between the NATMAP and ISRIC estimates of soil organic carbon in the landscape.
+
+![Calculating discrepancies between datasets or model outputs](images/01-screenshots-key/06-difference-model.png)
+
+When the output is added to Map View it provides clear picture of where the two soil maps disagree about the amount of soil organic carbon and by how much.
+
+![Displaying discrepancies between datasets or model outputs](images/01-screenshots-key/07-difference-map.png)
+
+### Opportunity Maps {.unnumbered}
+
+Creating opportunity maps and risk maps which display specific locations that match certain conditions can also be done using a combination of set operations and other model components. Here is a rather complex model that identifies candidate sites for woodland expansion projects.
+
+![A model to generate opportunity maps](images/01-screenshots-key/08-opportunity-model.png)
+
+In Map View you can see how the model is designed to highlight areas with higher or lower priority for woodland expansion (in this case based on several parameters including proximity to existing ancient woodlands and location in catchments).
+
+![Example of an opportunity map](images/01-screenshots-key/09-opportunity-map.png)
+
+## Scaling Models 
 
 Relate to policy implications.
 

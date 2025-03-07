@@ -1,22 +1,222 @@
 # Getting Started
 
+## Making an account
+
+Sign in or sign up to make an account.
+
+![](images/02-screenshots-start/02-sign-up.png)
+
+Then select a team or create a new one.
+
+![](images/02-screenshots-start/03-select-team.png)
+
 ## Setting up a new project
 
-![Placeholder image](images/02-screenshots-start/01-01-Projects.png)
+After you have logged in to your team workspace, the first menu you will see is the Project Menu. Click the blue"+" symbol to create a new project.
 
-![Placeholder image](images/02-screenshots-start/01-02-Extent.png)
+![](images/02-screenshots-start/04-project-menu.png)
 
-### Create an account
+First you will need to select an extent for the project and give the project a name. These can both be changed later if necessary.
 
-### Create a new project and set extent
+![](images/02-screenshots-start/05-create-project.png)
 
-## Map View
+## Adding Map Layers
 
-### Adding layers
+When you open the project, the default view is ***Map View.***
 
-### Snapshot tool
+![](images/02-screenshots-start/06-map-view.png)
+
+Click the black "+" next to the "Layers" heading to add map layers.
+
+![](images/02-screenshots-start/07-map-view-add-layers.png)
+
+There are a variety of layers available, organised into groups of drop down menus. We will choose one from the "Designations" group.
+
+![](images/02-screenshots-start/08-map-view-designations.png)
+
+Let's add "Ancient Woodland" to the map. It now shows up in the layer menu on the right and on the map in orange.
+
+![](images/02-screenshots-start/09-map-view-ancient-woodland.png)
+
+This is the most straightforward way of adding a new map layer to examine alongside other layers in Map view. It also preserves the original layer's data type (e.g. point data, vector data, raster data etc.). However, if you want to be able to use a map layer in analysis or to view statistics about a map layer it needs to be added in ***Model view*** which converts it to a format usable for modelling and generating statistics.
 
 ## Model View
 
+To enter the project ***Model view***, click the button on the top menu bar labelled "Model view." It will take you to the following screen.
+
+![](images/02-screenshots-start/11-model-view-blank.png)
+
+Right click the blank canvas to open the menu of model components.
+
+![](images/02-screenshots-start/12-model-view-right-click.png)
+
+You will see a list of component types to choose from including:
+
+1. **Inputs**: import data into the model.
+2. **Outputs**: add an output as a new layer in Map view or save it to your workspace datasets.
+3. **Properties**: add area and unit properties to map layer output.
+4. **Conversions**: convert data from number to numeric grid, numeric grid to number, boolean to categorical dataset.
+5. **Calculations**: calculate area, create a distance map, return the cell area, or generate an interpolation from input data.
+6. **Charts**: create a bar chart.
+7. **Set operations**: perform set operations on boolean datasets.
+8. **Arithmetic**: masking, expressions, and a set of simple mathematical functions to transform numerical datasets.
+
+Hover the mouse over each category to see the list of components. Let's chose UKCEH Land Cover from the Inputs category.
+
+![](images/02-screenshots-start/13-model-view-input-ceh.png)
+
+When you click the UKCEH Land Cover option it will add the component to the canvas from where you can interact with it (see below). It shows a box with a drop list to select the year and a set of blue nodes labelled for each type of land cover. These are the component's output nodes because they appear on the right hand side. This component has no input nodes (which would appear on the left).
+
+![](images/02-screenshots-start/14-model-view-ceh.png)
+
+Hover the mouse over the "?" at the top right of the UKCEH component to see information about the dataset.
+
+![](images/02-screenshots-start/15-model-view-ceh-info.png)
+
+Now let's say we want to create a new map layer showing only "Deciduous Woodland" from the UKCEH dataset. We can do this using the "Output" component called "Map layer".
+
+![](images/02-screenshots-start/16-model-view-output-map.png)
+
+The "Map layer" component takes two inputs indicated by the nodes on its left hand edge. The top input node is labelled "Output" because it determines what is sent as an output to Map view. The "Properties" input takes area and unit properties which are used to label the map layer in Map view. These are optional so we will ignore them for now.
+
+![](images/02-screenshots-start/17-model-view-map-layer.png)
+
+Make sure the year 2021 is selected on the UKCEH component and then click and drag from the "Deciduous Woodland" node to the input node on the Map layer component labelled "Output" (see below). Rename the Map layer component to something like "Woodland". This is the name that will appear in Map view as the label for the new map layer.
+
+![](images/02-screenshots-start/18-model-view-ukceh-map-layer.png)
+
+Now save and run the model. When the run process is complete you can switch back to ***Map view*** by clicking the button on the top menu bar.
+
+![](images/02-screenshots-start/19-map-view-woodland-layer.png)
+
+It is difficult to see the new Woodland layer because the default colours are white for TRUE and transparent for FALSE (i.e. areas of woodland show up as white while areas which are not woodland are invisible). As the new layer is overlaid on top of the OpenStreetMap layer the white areas of woodland are barely visible. Let's see how to manipulate map layers to make them more visible and meaningful as we view them overlaid on one another.
+
+## Manipulating map layers
+
+The layer colour options can be viewed by clicking the layer and opening the "Layer legend."
+
+![](images/02-screenshots-start/20-map-view-woodland-legend.png)
+
+Click the white square next to the label TRUE and select a colour from the colour palette.
+
+![](images/02-screenshots-start/21-map-view-woodland-colour.png)
+
+Now you will see the colour on the map change to match your selection.
+
+![](images/02-screenshots-start/22-map-view-woodland-green.png)
+
+::: {.callout-tip}
+You will notice that the "Woodland" layer is displayed as small grid squares. This is because the original data has been converted into a raster format (i.e. grid squares) to match the project resolution and zoom level - in this case zoom level 23 with a cell resolution of around 3x3m.
+:::
+
+Map layers can be re-ordered by clicking and dragging each layer up and down in the right hand sidebar. Each layer in the sidebar is displayed over all the layers below it. Click on the Woodland layer and drag it to the top of the stack of layers to see how the map view changes.
+
+![](images/02-screenshots-start/23-map-view-reorder.png)
+
+The opacity of each layer can be adjusted to allow you to view one or more layers simultaneously. Now let's put the Woodland layer back where it was, directly below the Ancient Woodland layer. Next, click on the Ancient Woodland layer, open "Layer settings" and adjust the opacity slider until you begin to see the new Woodland layer below. Now we can clearly see to what extent the designated areas of Ancient Woodland overlap with the extent of Deciduous Woodland recorded in 2021.
+
+![](images/02-screenshots-start/24-map-view-opacity.png)
+
+As mentioned above, adding a new map layer in this way (via the ***Model view***) means you can view information about it directly in ***Map view*** and via the ***Snapshot*** tool.
+
+## Layer information
+
+After saving the current project, return to the project menu and open the demonstration project called "Demo AGC." This has been set up for you with a model to estimate above ground carbon in the landscape of Kew Wakehurst using a habitat basemap and lidar data measuring feature height for all habitats containing vegetation. Feel free to toggle ***Model view*** to see how the model is structured.
+
+In Map view you will notice a map layer called "c-store le veg linear feature-ht". It won't show any data until you run the model.
+
+![](images/02-screenshots-start/25-demo-agc-map.png)
+
+Click "Run" and wait a moment for the model to create the map layer. It should look like this:
+
+![](images/02-screenshots-start/26-demo-agc-c-store-grey.png)
+
+Notice that the "Layer legend" now shoes a gradient bar of values from 0 to 272.87 with units of t/ha. The model has generated a raster layer representing organic carbon density. The density in t/ha of organic carbon estimated for each cell (1.5x1.5m) is represented as shade of grey from black (minimum) to white (maximum).
+
+To change the colour of the gradient go to the "Layer settings" and click on "Fill mode". From the drop down list you can select whatever fill mode you want. Let's try "Jet."
+
+![](images/02-screenshots-start/27-demo-agc-c-store-fill.png)
+
+The map is much easier to read with this adjustment.
+
+![](images/02-screenshots-start/28-demo-agc-c-store-jet.png)
+
+Now let's take a look at some more detailed information about the c-store layer.
+
+## Snapshot tool
+
+The ***Snapshot*** tool is used to view graphs and statistical information about a map layer<!-- and to download this information as CSV files for analysis with R or for use in excel and other statistical analysis programs.-->. Click "Snapshot" on the top menu bar to open the tool.
+
+![](images/02-screenshots-start/29-demo-agc-snapshot.png)
+
+The tool opens a new panel alongisde the layer menu and the map.
+
+![](images/02-screenshots-start/30-demo-agc-snapshot-open.png)
+
+To select an area to snapshot, hold down the command key and click and drag the mouse on the map. The ***Snapshot*** tool will immediately display a graph and some summer statistics about the area of the layer which you have selected.
+
+![](images/02-screenshots-start/31-demo-agc-snapshot-selection.png)
+
+Below the graph, you should also see a list of values for Sum, Min, Max, Median, Range and Mean. In addition to adjusting the decimal places of these values you can also adjust the number of bars displayed in the graph above.
+
+![](images/02-screenshots-start/32-demo-agc-snapshot-stats.png)
+
+If you want to see a graph and stats for the whole project area you can simply click "Set extent" and then select "Use project extent."
+
+![](images/02-screenshots-start/33-demo-agc-snapshot-project.png)
+
+The tool will now show you the same information for the entire project extent (indicated within the white highlight box on the map).
+
+![](images/02-screenshots-start/34-demo-agc-snapshot-project-extent.png)
+
+## Scaling
+
+Now let's say we want to run the same carbon model for a larger area such as the whole of the Wealden District Council. We can do this from ***Model view*** by clicking the "Extent" button on the top menu bar.
+
+![](images/02-screenshots-start/35-demo-agc-model-extent.png)
+
+This takes you to the project extent page where you choose a new extent to run the model on.
+
+![](images/02-screenshots-start/36-demo-agc-change-extent.png)
+
+It is currently set to Wakehurst. Click the drop down and select "Wealden District Council."
+
+![](images/02-screenshots-start/37-demo-agc-wealden.png)
+
+You will notice that the map shows the new extent and an updated zoom level of 20 since the area is much larger than the Wakehurst extent.
+
+![](images/02-screenshots-start/38-demo-agc-wealden-box.png)
+
+Click "Save and open project" and you will be taken back to the project Map view. If you hover the mouse over the yellow "Med" box on the top menu bar and it will display the extent on the map.
+
+![](images/02-screenshots-start/39-demo-agc-wealden-map.png)
+
+Now click "Run" and wait while the model is processing. After a few seconds the c-store layer will be updated as a map covering the Wealden District Council area.
+
+![](images/02-screenshots-start/41-demo-agc-wealden-c-store.png)
+
+## Saving datasets
 
 
+
+Save dataset component.
+
+Dataset menu.
+
+## Using datasets in models
+
+Input > Datasets component.
+
+Example model.
+
+## Expressions
+
+Expression component in model.
+
+Creating a new expression.
+
+Finding your new expression in the dropdown list of the expression component.
+
+## Inviting collaborators
+
+People menu to invite team members.

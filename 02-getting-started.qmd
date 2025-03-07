@@ -197,26 +197,136 @@ Now click "Run" and wait while the model is processing. After a few seconds the 
 
 ## Saving datasets
 
+Now we might want to save this c-store layer as a dataset to use in other projects. For example we could create a new project to compare the results of this model with another model of stored organic carbon or combine it with a model of below soil carbon. Or perhaps we already have an opportunity map showing potential locations for nature recovery projects which we could use with the carbon map and other biodiversity data to explore the implications of implementing these projects across the landscape.
 
+Back in ***Model view***, right click the canvas and select from the Outputs list the component called "Save dataset."
 
-Save dataset component.
+![](images/02-screenshots-start/42-demo-agc-model-outputs.png)
 
-Dataset menu.
+This component takes only one input to the node labelled "Output."
+
+![](images/02-screenshots-start/43-demo-agc-model-save-dataset.png)
+
+Connect the output from our model to the node on "Save datasets" and rename it something meaningful so you can find it again in the dataset menu. Then save the model and click "Run." When the run process has completed the component will read "Saved!"
+
+![](images/02-screenshots-start/44-demo-agc-model-save-connected.png)
+
+Now click "Back to projects" to return to the projects menu and click on "Datasets" to view your saved dataset.
+
+![](images/02-screenshots-start/45-demo-agc-datasets.png)
+
+From here you can edit the name of the dataset, delete it or download it as a json file.
 
 ## Using datasets in models
 
-Input > Datasets component.
+Next, return to the projects menu and open the "Test Project" we created at the start of this chapter and toggle ***Model view***. Right click the model canvas and select from the "Inputs" list the component called "Load dataset."
 
-Example model.
+![](images/02-screenshots-start/46-test-inputs-load-dataset.png)
+
+This component has one output node and a dropdown list from which to select your pre-saved dataset.
+
+![](images/02-screenshots-start/47-test-load-dataset.png)
+
+There is one very simple operation we can do first to demonstrate how to use the dataset in a model. We will use the Deciduous Woodland class from UKCEH to mask the c-store dataset thus creating a map of carbon stored in one type woodland.
+
+First, select from the "Arithmetic" list the component called "Mask numeric data."
+
+![](images/02-screenshots-start/48-test-arithmetic-mask.png)
+
+This component takes two inputs (a boolean layer to provide the mask and a numeric dataset to be masked) and provides one output (masked layer).
+
+![](images/02-screenshots-start/49-test-mask.png)
+
+Connect the output from the loaded dataset to the red node labelled "Numeric dataset."
+
+![](images/02-screenshots-start/50-test-mask-numeric.png)
+
+And connect the Deciduous Woodland node to the blue node labelled "Mask."
+
+![](images/02-screenshots-start/51-test-mask-numeric-boolean.png)
+
+If you run the model now it will fail to execute because the dataset does not cover the same area set as the project extent. It was created for the Wealden District Council exent and this project is still set to the Brighton Pavillion extent.
+
+![](images/02-screenshots-start/52-test-mask-fail.png)
+
+Click the "Extent" button on the top menu bar and change the extent to match the loaded dataset.
+
+![](images/02-screenshots-start/53-test-change-extent.png)
+
+Now when you run the model it should produce a preview inside the "Mask numeric data" component so that you can verify that it is doing what you expect.
+
+![](images/02-screenshots-start/54-test-mask-preview.png)
+
+The new masked layer can be added to Map view or saved as a new dataset in the same way as described above.
+
+## Adding datasets as map layers
+
+Alternatively, datasets can also be added directly in ***Map view*** as new map layers. Your saved datasets are displayed under the dropdown list labelled with your team name. In this case "Demo."
+
+![](images/02-screenshots-start/55-test-map-dataset.png)
+
+As soon as you select the dataset it will be added to the layer list and displayed on the map.
+
+![](images/02-screenshots-start/56-test-map-dataset-added.png)
+
+The fill mode of the new dataset layer can be changed in the same way as a layer added directly from Model view.
+
+![](images/02-screenshots-start/57-test-map-dataset-jet.png)
+
+One key difference with pre-saved datasets is that they load directly when you open the project whereas layers added directly from ***Model view*** using the "Map layer" component are only visible after running the model.
 
 ## Expressions
 
-Expression component in model.
+There is one more very important component that can be used in Model view and which provides a great deal of flexibility for building your models. It is the "Expression" component and you can find it in the "Arithmetic" list.
 
-Creating a new expression.
+![](images/02-screenshots-start/58-test-model-expression.png)
 
-Finding your new expression in the dropdown list of the expression component.
+This component has a number of inputs (which are adjustable as you will soon see) and generates one output. It also has a drop down list for you to select from a choice of different expressions.
 
-## Inviting collaborators
+![](images/02-screenshots-start/59-test-model-expression-lin.png)
 
-People menu to invite team members.
+Before we use this component in the model we can create our own expression from the expression menu in project view.
+
+![](images/02-screenshots-start/60-expressions.png)
+
+Click the blue "+" sign to create a new expression.
+
+![](images/02-screenshots-start/61-new-expression.png)
+
+Here we can name and define our own expression. For now we can simply call it "Test" and define a simple formula "w * x + t". This will create an expression component with three inputs corresponding to the text in this formula which will perform the calculation as defined for each cell in the input dataset to provide a equivalent output dataset.
+
+![](images/02-screenshots-start/62-test-expression-define.png)
+
+To check that the expression is doing what we expect we can click the "Test expression" button and enter some numbers to view the result.
+
+![](images/02-screenshots-start/63-test-expression-define-test.png)
+
+Save the expression and you should now see it listed in the Expressions menu.
+
+![](images/02-screenshots-start/64-expression-menu.png)
+
+Return to the project and toggle ***Model view***. You should now see the new expression that we just created in the drop down list of the Expression component.
+
+![](images/02-screenshots-start/65-test-model-select-expression.png)
+
+When you select the "Test" expression, the component box will change to create the correct input nodes and display the formula to show you the calculation it will perform.
+
+![](images/02-screenshots-start/66-test-model-expression-selected.png)
+
+Connect the red "Masked layer" node to the expression's input node labelled "w".
+
+![](images/02-screenshots-start/67-test-model-expression-w.png)
+
+Next we can use a numeric constant to provide inputs to the other nodes "t" and "x". You will find the "Numeric constant" component in the "Inputs" list. For simplicity's sake let's just connect it to both input nodes and give a value of "2".
+
+![](images/02-screenshots-start/68-test-model-expression-constant.png)
+
+Finally, add a "Map layer" component to add the expression output to ***Map view*** and label it something meaningful.
+
+![](images/02-screenshots-start/69-test-model-expression-output.png)
+
+Save the project, toggle ***Map view*** and run the model to view the new map layer. You should now see it listed in the layer menu above c-store layer we added previously.
+
+![](images/02-screenshots-start/70-test-map-expression-modified-layer.png)
+
+Now you are ready to play around building models and exploring your datasets alongside other map layers. For an example of use case with step by step guides to building a complete model turn to the next chapter.

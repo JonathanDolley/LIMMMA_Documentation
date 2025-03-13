@@ -1,6 +1,6 @@
 # Key Features
 
-Our purpose in developing the LIMMMA tool is to support landscape management and planning by accelerating engagement with emerging evidence in transparent ways. The tool is designed to be flexible, accessible and extendable. It's flexibility means it can be tailored to a diversity of use cases such as mapping carbon storage and flux, biodiversity impacts, nature based solution opportunity maps, social-ecological outcomes of land-use change etc. Accessibility is vital to ensure that it is not an exclusive tool for experts but can be used by non-experts and can be used to make analysis transparent to a diversity of stakeholders. Finally, LIMMMA is designed to be readily extendable as new use cases are found and as new features are required.
+Our purpose in developing the LIMMMA tool is to support landscape management and planning by accelerating engagement with emerging evidence in transparent ways. The tool is designed to be flexible, accessible and extendable. Its flexibility means it can be tailored to a diversity of use cases such as mapping carbon storage and flux, biodiversity impacts, nature based solution opportunity maps, social-ecological outcomes of land-use change etc. Accessibility is vital to ensure that it is not an exclusive tool for experts but can be used by non-experts and can be used to make analysis transparent to a diversity of stakeholders. Finally, LIMMMA is designed to be readily extendable as new use cases are found and as new features are required.
 
 The currently live key features are as follows:
 

@@ -1,0 +1,43 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![From the "Inputs" list, select the "Designations" component](01-inputs-designations.png)
+
+---
+
+![This component provides a selection of designation types as boolean datasets.](02-designations.png)
+
+---
+
+![We will use the "Union" component to join some of these designations into a single class to be excluded from our candidate sites selection"](03-designations-union.png)
+
+---
+
+![Connect the nodes as shown and rename the "Union" component to "Conserved habitats (exclude)" to indicate the new class.](04-designations-union-connected.png)
+
+---
+
+![Save and run the model to see a preview of this new class.](05-conserved-habitats-ran.png)
+
+---
+
+![To exclude these locations from our candidate site selection we can use the "Complement" component before linking up to the final "Intersection" operation.](06-complement.png)
+
+---
+
+!["Complement" simply creates a mirror image of the input, in this case selecting all the areas not contained in the new class.](07-complement-ran.png)
+
+---
+
+![Connecting the output from the "Complement" component to the "Intersection" component ensures that only candidate sites which do not intersect with the excluded areas will be selected.](08-complement-intersection.png)
+
+---
+
+![Let's see what effect this has on our final selection of candidate sites. Save and run the model one more time.](09-intersection-run.png)
+
+---
+
+![Now we can see that the final selection, as intended, excludes areas within conserved habitats.](10-intersection-ran.png)

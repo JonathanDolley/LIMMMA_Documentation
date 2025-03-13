@@ -1,0 +1,83 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Back in Model view add an additional 'UKCEH Land Cover' component to the canvas along with a 'Union' component.](01-set-operations.png)
+
+---
+
+![Next add each of the following components to the canvas as shown here (Union, Distance Map, Less, Numeric Constant).](02-distance-map-cluster.png)
+
+---
+
+![Link the components up as shown, set the constant to 50 (metres), save the project and click run to see the previews.](03-union-distance-less.png)
+
+---
+
+![Now add another 'Union' and an 'Intersection' component.](04-intersection.png)
+
+---
+
+![Connect the two grassland classes of interest to the 'Union' component to join them together into a single class.](05-grassland-union.png)
+
+---
+
+![Now link the united grassland classes and the output from the 'Less' component to the 'Intersection' component. This will show us all the grassland areas which fall within 50 metres of woodland.](06-grassland-intersection.png)
+
+---
+
+![Save and run the model again to see the updated preview.](07-grassland-intersection-ran.png)
+
+---
+
+![Add another cluster of components as shown (Union, Distance Map, Greater, Numeric Constant).](08-distance-map-cluster.png)
+
+---
+
+![Connect the components so that urban and suburban are joined into a single class (Union), passed to the 'Distance Map' and filtered through 'Greater' to select only areas over 50m distant from urban/suburban.](09-union-distance-greater.png)
+
+---
+
+![Save and run the model to see the preview.](10-distance-map-ran.png)
+
+---
+
+![So far we have two distance map clusters which we will bring together with candidate basemap (grassland) through the 'Intersection' component to generate our map of candidate sites.](11-reorientation.png)
+
+---
+
+![The whole model should look like this once you have added the third link to the 'Intersection' component.](12-whole-model-intersection.png)
+
+---
+
+![Once more save and run the model to see how the preview map responds.](13-intersection-preview-1.png)
+
+---
+
+![There is a slight change in the map result but not very noticeable.](14-intersection-preview-2.png)
+
+---
+
+![Next add a 'Map Layer' component to add the output to Map view.](15-output-candidate-sites.png)
+
+---
+
+![Having saved and run the model, toggle Map view to examine the new layer.](16-candidate-sites.png)
+
+---
+
+![Zooming in and making the land cover layer visible underneath the candidate sites layer enables us to see how our site selection criteria are working.](17-examine-candidates.png)
+
+---
+
+![The Snapshot tool can be used to see an approximation of the area identified as candidate sites. Having seen the map, we can easily adjust the parameters in the model to see immediately what effect it has on our site selections.](18-snapshot-candidates.png)
+
+---
+
+![Return to Model view and adjust the values for the Numeric constants. You might also want to rename some of the components to communicate more clearly what their output is.](19-adjust-parameters.png)
+
+---
+
+![Save and run the model and toggle Map view to see the effects of your changes.](20-review-results.png)

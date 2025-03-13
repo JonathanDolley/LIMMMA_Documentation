@@ -1,0 +1,71 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Let's first create a new project and set the extent to 'Wealden District Council.'](01-new-project.png)
+
+---
+
+![Add the UKCEH Land Cover map layer.](02-add-layer.png)
+
+---
+
+![Open the layer legend to see an overview of the land cover classes.](03-ukceh.png)
+
+---
+
+![Switch to model view an import the UKCEH dataset.](04-model-ukceh.png)
+
+---
+
+![Select the 2021 dataset.](05-ukceh-2021.png)
+
+---
+
+![From the 'Conversion' component list add 'Boolean to categorical dataset' to the canvas.](06-conversions.png)
+
+---
+
+![It takes any number of boolean inputs and generates a categorical dataset from them.](07-boolean-categorical.png)
+
+---
+
+![Link up only the land cover classes we are interested in as shown.](08-boolean-inputs.png)
+
+---
+
+![Connect a 'Map layer' component to add the categorical dataset to Map view. ](09-categorical-output.png)
+
+---
+
+![Run the model and toggle to Map view. If you make the original UKECH layer invisible you will see that your new map layer displays only over the project extent.](10-map-ukceh-invisible.png)
+
+---
+
+![Select the new layer and you will notice that you can change the colour of each class and also select each layer individually to be visible or not.](11-land-cover-wealden.png)
+
+---
+
+![You can change the colour scheme by clicking each colour box and selecting from the palette.](12-change-colours.png)
+
+---
+
+![For example, this colour scheme makes it easy to pick out each land cover type more easily.](13-better-colours.png)
+
+---
+
+![](14-better-colours.png)
+
+---
+
+![Adjust the opacity of the OpenStreetMap layer to make the colours more readily visible.](15-osm-opacity.png)
+
+---
+
+![Use the snapshot tool to see an overview of the relative proportion of areas covered by each land cover type.](16-snapshot.png)
+
+---
+
+![Since the Improved Grassland and Calcareous Grassland are the only types of grassland with significant area we can examine them on their own to visualise the potential areas for woodland expansion.](17-select-grassland.png)

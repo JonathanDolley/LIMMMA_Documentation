@@ -20,7 +20,7 @@ format:
 
 ---
 
-![Simply specify the constant by entering a number its text input box.](05-model-constant.png)
+![Simply specify the constant by entering a number in its text input box.](05-model-constant.png)
 
 ---
 

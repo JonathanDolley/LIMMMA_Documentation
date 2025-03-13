@@ -1,1 +1,8 @@
+<style>
+.slide-deck {
+    width: 100%;
+    height: 475px;
+}
+</style>
+
 # Use Case 2: Below Ground Carbon

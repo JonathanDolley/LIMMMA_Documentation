@@ -1,3 +1,10 @@
+<style>
+.slide-deck {
+    width: 100%;
+    height: 475px;
+}
+</style>
+
 # Use Case 3: Multifunctional Landscape Analysis
 
 Carbon density maps provide only one part of the evidence required for landscape management and planning strategies.
@@ -5,8 +12,8 @@ In addition to understanding the impact of land management practices and land us
 These direct environmental implications of planning projects need to be understood alongside the economic and social benefits associated with them so that holistic strategies for land use change can take account of the diverse interests of multiple stakeholders.
 
 For example, it makes sense to develop Local Nature Recovery Strategies (LNRS) based not only on a wide range of biophysical information (carbon, biodiversity, habitat quality and connectivity, flood risk etc.) but also in connection with other land use policies which have implications for the LNRS.
-The Strategic Housing and Economic Land Availability Assessments (SHELAA) carried out by district authorities identify plots of land suitable for housing and commerical development.
-The Biodiversity Net Gain (BNG) legislation, on the other hand, requires new developments to replace lost habitats with on and off site habitat creation or improvements.
+One such policy is the The Strategic Housing and Economic Land Availability Assessments (SHELAA) carried out by district authorities to identify plots of land suitable for housing and commerical development.
+Another is the Biodiversity Net Gain (BNG) legislation which requires new developments to replace lost habitats with on-site and off-site habitat creation or improvements.
 By integrating map outputs from sources such as SHELAA and BNG analysis with carbon density and other biodiversity datasets in LIMMMA we can begin to create a platform to support LNRS consultations involving decision makers, community stakeholders and researchers.
 LIMMMA can thus enable a collaborative process of developing opportunity maps for LNRS and support ongoing monitoring of the implementation and impacts of individual projects across the landscape.
 
@@ -15,30 +22,64 @@ Here we present a series of demonstration projects in LIMMMA which illustrate th
 
 ## Creating opportunity maps
 
-Fragmented woodland.
+Current features of LIMMMA already support the creation of opportunity maps based on combinations of criteria for site selection derived from loaded datasets (see below). The resulting maps can be iteratively modified in consultation with local stakeholders by adjusting selection criteria or by uploading additional datasets (e.g. locally created habitat maps). However, this process still relies on technical support from the Sussex research team, meaning it is not as user friendly as we would like. To makes things easier for non-expert users we are working on a new feature to enable users to manually edit map layers and enrich them with their own experiential knowledge directly in the LIMMMA interface.
 
-Housing expansion.
+### Current capabilities
+
+The following is a worked example of how to create an opportunity map by combining the outputs from two separate models, each of which uses a different set of criteria to identify areas most suitable for tree planting and housing respectively. Note, this is only a demonstration of the capabilities of LIMMMA and should not be taken as evidence in support of any specific land-use change strategies.
+
+#### Identify candidate land cover {.unnumbered}
+
+The first thing to do is to consider what type of habitat would be suitable for woodland plantations. Let us assume that arable farmland and protected habitats are automatically excluded while grassland is the main candidate for woodland expansion. To get an initial idea of the scope for expanding wooland onto grassland areas we can add the UKCEH habitat map as a categorical map layer. Here is how we can use a land cover map to begin the process of creating an opportunity map in LIMMMA:
+
+<iframe class="slide-deck" src="./slides/demo/05-01-explore.html"></iframe>
+
+Examination of the UKCEH Land Cover map reveals two types of candidate land cover for woodland plantation: "Improved Grassland" and "Calcareous Grassland." Now we need to refine our search for candidate grassland sites by adding some additional criteria.
+
+#### Set criteria for site selection {.unnumbered}
+
+We could use proximity to woodland and urban/suburban areas to further narrow down our site selection. For example, grassland situated adjacent to woodland and beyond a certain distance from built up areas might represent our preferred locations for tree planting. The basic structure of this operation is to use two clusters of Distance Map, Greater/Less, and Numeric Constant components with set operation components (Union and Intersection) to filter the candidate areas (in this case grassland) according to distance from woodland and urban/suburban. The following slide show will walk you through the steps to build the model.
+
+<iframe class="slide-deck" src="./slides/demo/05-02-refine.html"></iframe>
+
+Of course this is a very simple example, but it demonstrates the basic principle of how to refine your search for candidate sites by progressively adding limiting conditions. These conditions need not be restricted to proximity to other habitats or land cover but could also include other biophysical datasets. For example you might set thresholds for rainfall, soil conditions, slope, land tenure or designations etc. Or you could use flood risk data to prioritise certain at risk areas for tree planting to improve natural flood prevention. On the other hand, you could use biodiversity data to identify areas of woodland with high populations of specific species which would benefit from an expansion of their already existing habitat into adjacent grassland.
+
+#### Exclude protected habitats from site selection
+
+It might also be necessary to exclude specific areas from your site selection because, for example, they are designated areas of natural beauty or conservation areas in which grasslands are managed carefully to preserve their unique biodiversity.
+
+<iframe class="slide-deck" src="./slides/demo/05-03-exclude.html"></iframe>
 
 Combine.
 
-## Estimating potential environmental impacts
+### Potential new features
+
+
+
+
+
+## Visualising scenarios
+
+### Current capabilities
 
 Using carbon density maps with opportunity maps.
 
 Adding BNG?
 
-## Creating bespoke layers
+### Potential new features
+
+#### Creating bespoke layers {.unnumbered}
 
 Example of Brighton green space.
 
-## Adding multiple values
+#### Adding multiple values {.unnumbered}
 
 Example of imagined Brighton NBS.
 
-## Visualising trade-offs
+#### Visualising trade-offs {.unnumbered}
 
 Showing bar graph matrix.
 
-## Comparing scenarios
+#### Comparing scenarios {.unnumbered}
 
 Not sure yet... Gamification bit?

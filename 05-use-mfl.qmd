@@ -22,15 +22,15 @@ Here we present a series of demonstration projects in LIMMMA which illustrate th
 
 ## Creating opportunity maps
 
-Current features of LIMMMA already support the creation of opportunity maps based on combinations of criteria for site selection derived from loaded datasets (see below). The resulting maps can be iteratively modified in consultation with local stakeholders by adjusting selection criteria or by uploading additional datasets (e.g. locally created habitat maps). However, this process still relies on technical support from the Sussex research team, meaning it is not as user friendly as we would like. To makes things easier for non-expert users we are working on a new feature to enable users to manually edit map layers and enrich them with their own experiential knowledge directly in the LIMMMA interface.
+Current features of LIMMMA already support the creation of opportunity maps based on combinations of criteria for site selection derived from loaded datasets (see below). The resulting maps can be iteratively modified in consultation with local stakeholders by adjusting selection criteria or by uploading additional datasets (e.g. locally created habitat maps or Natural England's [Habitat Network maps](https://naturalengland-defra.opendata.arcgis.com/datasets/fceb93850462454ab3fb5accea2be35b_0/explore?location=52.723073%2C-2.493668%2C6.99) and [Priority Habitats Inventory](https://naturalengland-defra.opendata.arcgis.com/datasets/39403df11c8044d998772db5b54ad86c_0/explore?location=52.705609%2C-2.483550%2C6.90)). However, the process of uploading new datasets still relies on technical support from the Sussex research team, meaning it is not as user friendly as we would like. Although we plan to add the capability for users to upload their own datasets without extra help, we recognise the value of being able to create and edit maps within the LIMMMA tool itself. So to makes things easier for non-expert users we are working on a new feature to enable users to manually edit map layers and enrich them with their own experiential knowledge directly in the LIMMMA interface.
 
 ### Current capabilities
 
-The following is a worked example of how to create an opportunity map by combining the outputs from two separate models, each of which uses a different set of criteria to identify areas most suitable for tree planting and housing respectively. Note, this is only a demonstration of the capabilities of LIMMMA and should not be taken as evidence in support of any specific land-use change strategies.
+The following is a worked example of how to create an opportunity map by using a combination of datasets and model components to identify areas which match a specific set of criteria. Note, this is only a demonstration of the capabilities of LIMMMA and should not be taken as evidence in support of any specific land-use change strategies.
 
 #### Identify candidate land cover {.unnumbered}
 
-The first thing to do is to consider what type of habitat would be suitable for woodland plantations. Let us assume that arable farmland and protected habitats are automatically excluded while grassland is the main candidate for woodland expansion. To get an initial idea of the scope for expanding wooland onto grassland areas we can add the UKCEH habitat map as a categorical map layer. Here is how we can use a land cover map to begin the process of creating an opportunity map in LIMMMA:
+The first thing to do is to consider what type of habitat would be suitable for woodland plantations. Let us assume that arable farmland is automatically excluded for food security reasons and that, therefore, grassland is the main candidate for woodland expansion. To get an initial idea of the scope for expanding woodland onto grassland areas we can add the UKCEH habitat map as a categorical map layer. Here is how we can use a land cover map to begin the process of creating an opportunity map in LIMMMA:
 
 <iframe class="slide-deck" src="./slides/demo/05-01-explore.html"></iframe>
 
@@ -38,27 +38,39 @@ Examination of the UKCEH Land Cover map reveals two types of candidate land cove
 
 #### Set criteria for site selection {.unnumbered}
 
-We could use proximity to woodland and urban/suburban areas to further narrow down our site selection. For example, grassland situated adjacent to woodland and beyond a certain distance from built up areas might represent our preferred locations for tree planting. The basic structure of this operation is to use two clusters of Distance Map, Greater/Less, and Numeric Constant components with set operation components (Union and Intersection) to filter the candidate areas (in this case grassland) according to distance from woodland and urban/suburban. The following slide show will walk you through the steps to build the model.
+We could use proximity to woodland and urban/suburban areas to further narrow down our site selection. For example, grassland situated adjacent to woodland and beyond a certain distance from built-up areas might represent our preferred locations for tree planting. The basic structure of this operation is to use two clusters of "Distance Map", "Greater/Less", and "Numeric Constant" components with set operation components ("Union" and "Intersection") to filter the candidate areas (in this case grassland) according to distance from woodland and urban/suburban. The following slides walk you through the steps to build the model.
 
 <iframe class="slide-deck" src="./slides/demo/05-02-refine.html"></iframe>
 
 Of course this is a very simple example, but it demonstrates the basic principle of how to refine your search for candidate sites by progressively adding limiting conditions. These conditions need not be restricted to proximity to other habitats or land cover but could also include other biophysical datasets. For example you might set thresholds for rainfall, soil conditions, slope, land tenure or designations etc. Or you could use flood risk data to prioritise certain at risk areas for tree planting to improve natural flood prevention. On the other hand, you could use biodiversity data to identify areas of woodland with high populations of specific species which would benefit from an expansion of their already existing habitat into adjacent grassland.
 
-#### Exclude protected habitats from site selection
+#### Exclude areas from site selection {.unnumbered}
 
-It might also be necessary to exclude specific areas from your site selection because, for example, they are designated areas of natural beauty or conservation areas in which grasslands are managed carefully to preserve their unique biodiversity.
+It might also be necessary to exclude specific areas from your site selection because, for example, they are designated conservation areas in which grasslands are managed carefully to preserve their unique biodiversity. Filtering out specific areas from the candidate site selection is a straightforward matter of using set operations to define the excluded areas.
 
 <iframe class="slide-deck" src="./slides/demo/05-03-exclude.html"></iframe>
 
-Combine.
+#### Separate candidate sites by priority {.unnumbered}
+
+Now let's say we want to prioritise candidate sites which are adjacent to Ancient Woodlands. Using another cluster of "Distance Map", "Less" and "Numeric Constant" we can split the output from the candidate site selection according to proximity to Ancient Woodland.
+
+<iframe class="slide-deck" src="./slides/demo/05-04-proximity.html"></iframe>
+
+Now we have seen how to create an opportunity map, refine it and add outputs as a categorical map layer we can turn to the anticipated new features designed to make the process of creating opportunity maps easier and more flexible.
 
 ### Potential new features
 
+The functions described above provide a flexible way of creating opportunity maps based on landscape characteristics (e.g. land cover types and biophysical conditions) and socio-economic data (e.g. indicators of deprivation). However, the resulting maps can only be used as a foundation or starting point for developing land-use strategies because they do not take into account the peculiarities of local contexts or the experiential knowledge of local communities. 
 
+Technically, this local and contextual information can be imported into LIMMMA once it has been gathered and processed using other software tools. However, it would be preferable to be able to capture such insights from within the LIMMMA tool itself so that the data could be used directly to improve the selection of candidate sites. For example, Farm Clusters may propose specific interventions on sections of their owned land which they could add the opportunity map. Or community conservation groups might want to be able to identify on the map specific areas they know to be of high importance for endangered species. Focus groups with local residents might reveal important information about access, use and quality of particular locations which would otherwise remain undifferentiated in habitat maps but which have implications for their suitability for specific types of intervention. Each of these examples call for a function that enables the user to edit, draw on and annotate map layers in Map view to save for use in Model view. Below is a mock-up of how this "Map drawing" function might work.
 
-
+![Mock-up of adding contextual information in Map view by drawing or painting shapes and adding labels and links.](images/05-screenshots-mfl/05-01-user-generated-layer-mockup.jpg)
 
 ## Visualising scenarios
+
+Another application of this potential new function would be to enable the design of bespoke land-use change scenarios within LIMMMA in consultation with local stakeholders. Although scenario maps made in other software tools can already be imported into LIMMMA with support from the Sussex technical team, it would be much easier for users if they could create such maps directly within LIMMMA itself. Once the new function is completed, it would enable users design  land-cover maps from scratch or modify existing map layers to create new ones and to use these layers in models to analyse the potential impacts of proposed land-use changes on multiple outcomes.
+
+The capability to generate this type of scenario analysis once scenario maps have been created is quite straightforward and relies on LIMMMA's functionality for saving model outputs for use as datasets in new models.
 
 ### Current capabilities
 
@@ -68,17 +80,28 @@ Adding BNG?
 
 ### Potential new features
 
-#### Creating bespoke layers {.unnumbered}
+To model the potential outcomes of individual NBS or land-use change strategies across large-scale multifunctional landscapes we understand that it is important not only to develop indicators of carbon storage and biodiversity improvement but also to develop proxies for the benefits obtained by a diversity of stakeholders across a range of values from economic to cultural and wellbeing benefits.
+In [previous work](https://agri-food-transformations.netlify.app) in India and China we have begun to develop a method to model and visualize the impacts of land-use change on multiple stakeholders in peri-urban contexts.
 
-Example of Brighton green space.
+#### Value perceptions {.unnumbered}
 
-#### Adding multiple values {.unnumbered}
+The method begins with stakeholders identifying specific landscape features, habitats and land-uses that matter to them in some way and identifying the range of outcomes they derive from these.
+As an illustration, the following image shows how a wild park site might be perceived by different stakeholders including low- and high-income residents, the local planning authority and the LNRS team.
 
-Example of imagined Brighton NBS.
+![Mock-up of an interface to record perceptions of value of different land-use types for specific outcomes of concern to particular stakeholders.](images/05-screenshots-mfl/05-02-scoring-mockup.jpg)
+
+Next each stakeholder or group of stakeholders would determine a significance score for each combination of land-use and outcome to express the impact of: 1) loss of access; 2) change in type of access; 3) gain in access, to that land-use type along with what conditions would define loss, change and gain in this context.
 
 #### Visualising trade-offs {.unnumbered}
 
-Showing bar graph matrix.
+The consequence of a combination of land-use changes across a landscape can then be modelled in terms of its relative positive and negative impacts on various stakeholders for a range of outcomes.
+In the mock-up below, the map displays the combination of land-use changes while the graph displays net outcome of those changes.
+
+![Mock up of an interface displaying results of a model of multifunctional landscape values for a given scenario of land-use change.](images/05-screenshots-mfl/05-03-bars-mockup.jpg)
+
+In the visual, positive impacts are represented by blue bars and negative by red. The length of bars indicates the scale of the impact according to the area of land involved which could also be modified for other parameters such as population density. The height of the bars represents the significance of the impact as indicated by stakeholders themselves.
+The idea is that this visualisation provides an entry point for discussion about the trade-offs and synergies between different outcomes and policy goals for any given strategy of land-use change.
+While we have not yet implemented this functionality in the current version of LIMMMA we see an opportunity to develop it and build it into future work to support LNRS and local planning and to support the development of virtual living labs.
 
 #### Comparing scenarios {.unnumbered}
 

@@ -1,0 +1,43 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Add the relevant components to the model canvas.](01-distance-constant-less.png)
+
+---
+
+![Connect up the components as shown so that the final "Less" component selects all areas within 100m of Ancient Woodland and rename it accordingly.](02-ancient-woodland-connect.png)
+
+---
+
+![Drag the renamed component  closer to the "Intersection" component and add another "Intersection" and a "Set Difference" component.](03-less-intersection-difference.png)
+
+---
+
+![Don't forget we also need to add the outputs as new map layers so include two more "Map layer" components.](04-map-layers.png)
+
+---
+
+![Connect the components as shown and rename the "Map layer" components to whatever you want to displayed in the layer list in Map view. The set operation components can be named to remind you of what they are doing.](05-set-operations-map-layer-connect.png)
+
+---
+
+![Save and run the model to see the previews and check that the model is doing what you expect.](06-set-operations-ran.png)
+
+---
+
+![If you toggle Map view and edit the layer colours you can create a clear visualisation the high and low priority candidate sites and view them overlaid with other map layers.](07-map-priorities.png)
+
+---
+
+![If you add the Ancient Woodlands layer and make it visible you will be able to verify that the site section and prioritisation is working properly.](08-map-priorities-ancient-woodland.png)
+
+---
+
+![To add both priority categories to the map as a single layer we can use the "Boolean to categorical dataset" conversion component.](09-boolean-categorical.png)
+
+---
+
+![Now the high and low priority sites are shown in a single layer with names corresponding to the name of each input into the conversion component.](10-map-prioritised-candidates.png)

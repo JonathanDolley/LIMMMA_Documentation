@@ -1,0 +1,83 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![This is what we are aiming for. It is fairly complex so it would best to create a new project to keep it separate from the opportunity mapping project. We can save the output from the fragmentation model to use later in the opportunity mapping.](01-model-whole.png)
+
+---
+
+![First we will identify woodland edges. Create a new project and add these components to the model canvas.](02-edge-components.png)
+
+---
+
+![Connect them up as shown, save and run the model.](03-edge-connected.png)
+
+---
+
+![Rename the components to indicate the purpose of each. This part of the model finds woodland edges by identifying areas of woodland adjacent to non-woodland.](04-edge-renamed.png)
+
+---
+
+![Next we need to identify interior (or non-edge) woodland areas and generate a distance map. Add these additional components.](05-interior-components.png)
+
+---
+
+![And connect them up as shown.](06-interior-connected.png)
+
+---
+
+![You will need to zoom out a bit to add the final two connections from "Woodland" and the "Numeric constant."](07-interior-long-connections.png)
+
+---
+
+![Rename the "Set difference" component to "Interior woodland." Save and run the model to preview the results so far.](08-interior-preview.png)
+
+---
+
+![Add an "Intersection" component and connect it to "Woodland" and the output from the "Greater" on the end of the "Interior woodland" row.](09-isolated.png)
+
+---
+
+![Rename the final "Intersection" component to "Isolated woodland", save and run the model. The preview displays all woodland areas which are adjacent to non-woodland and non-adjacent to interior woodland.](10-isolated-renamed.png)
+
+---
+
+![Finally we need to create new "Continuous woodland" class. Add a "Set difference" component.](11-continuous.png)
+
+---
+
+![Rename it "Continuous woodland" and connect the input node A to "Woodland" as shown.](12-continuous-connected.png)
+
+---
+
+![Drag the "Continuous woodland" component to the other end of the model near to "Isolated woodland."](13-continuous-moved.png)
+
+---
+
+![And connect "Isolated woodland" to input B.](14-continuous-connected.png)
+
+---
+
+![Add a "Boolean to categorical dataset" converter and connect the outputs from "Isolated woodland" and "Continuous woodland." Save and run the model.](15-boolean-categorical.png)
+
+---
+
+![Finally add the "Map layer" component to export the output to the Map view.](16-map-layer.png)
+
+---
+
+![You can save the model and then toggle Map view and run the model from Map view.](17-map-view.png)
+
+---
+
+![When the model has finished running the new layer will be displayed showing the two new categories of woodland.](18-map-view-ran.png)
+
+---
+
+![You might want to change the colours for each category to make them more visible.](19-map-view-colours.png)
+
+---
+
+![If you zoom in on the map you will be able to see clearly the distribution of isolated and continuous woodland identified by the model.](20-map-view-zoom.png)

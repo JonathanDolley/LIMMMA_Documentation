@@ -16,6 +16,7 @@ project:
     - "demo/05-02-refine/index.qmd"
     - "demo/05-03-exclude/index.qmd"
     - "demo/05-04-proximity/index.qmd"
+    - "demo/05-05-fragmentation/index.qmd"
 
 format:
   revealjs:

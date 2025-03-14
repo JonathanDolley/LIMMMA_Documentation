@@ -16,15 +16,11 @@ format:
 
 ---
 
-![Now add another 'Union' and an 'Intersection' component.](04-intersection.png)
+![Now add an 'Intersection' component.](04-intersection.png)
 
 ---
 
-![Connect the two grassland classes of interest to the 'Union' component to join them together into a single class.](05-grassland-union.png)
-
----
-
-![Now link the united grassland classes and the output from the 'Less' component to the 'Intersection' component. This will show us all the grassland areas which fall within 50 metres of woodland.](06-grassland-intersection.png)
+![And link the Improved Grassland class and the output from the 'Less' component to the 'Intersection' component. This will show us all the grassland areas which fall within 50 metres of woodland.](06-grassland-intersection.png)
 
 ---
 
@@ -32,7 +28,7 @@ format:
 
 ---
 
-![Add another cluster of components as shown (Union, Distance Map, Greater, Numeric Constant).](08-distance-map-cluster.png)
+![Add another cluster of components as shown (Union, Distance Map, Numeric Constant, Greater).](08-distance-map-cluster.png)
 
 ---
 
@@ -40,11 +36,11 @@ format:
 
 ---
 
-![Save and run the model to see the preview.](10-distance-map-ran.png)
+![Save and run the model to see the preview. So far we have two distance map clusters which we will bring together with candidate base layer (Improved Grassland) through the 'Intersection' component to generate our map of candidate sites.](10-distance-map-ran.png)
 
 ---
 
-![So far we have two distance map clusters which we will bring together with candidate basemap (grassland) through the 'Intersection' component to generate our map of candidate sites.](11-reorientation.png)
+![You can zoom in and out and drag the components around on the canvas to tidy things up.](11-reorientation.png)
 
 ---
 
@@ -52,7 +48,7 @@ format:
 
 ---
 
-![Once more save and run the model to see how the preview map responds.](13-intersection-preview-1.png)
+![Zoom in on the Intersection component and once more save and run the model to see how the preview map responds.](13-intersection-preview-1.png)
 
 ---
 
@@ -72,12 +68,24 @@ format:
 
 ---
 
-![The Snapshot tool can be used to see an approximation of the area identified as candidate sites. Having seen the map, we can easily adjust the parameters in the model to see immediately what effect it has on our site selections.](18-snapshot-candidates.png)
+![The Snapshot tool can be used to see an approximation of the area identified as candidate sites (just over 100 km^2).](18-snapshot-candidates.png)
 
 ---
 
-![Return to Model view and adjust the values for the Numeric constants. You might also want to rename some of the components to communicate more clearly what their output is.](19-adjust-parameters.png)
+![Keep the Snapshot tool open and select the UKCEH Layer to toggle information about that layer (total Improved Grassland is around 400 km^2).](18-snapshot-ukceh-layer.png)
 
 ---
 
-![Save and run the model and toggle Map view to see the effects of your changes.](20-review-results.png)
+![Close Snapshot and zoom in to a section on the map. Now we can easily adjust the parameters in the model and toggle back to Map view to see what impact our changes have on the map.](19-map-zoom.png)
+
+---
+
+![Return to Model view and adjust the values for the Numeric constants. You might also want to rename some of the components to communicate more clearly what their output is.](20-adjust-parameters.png)
+
+---
+
+![Save and run the model and toggle Map view to see the effects of your changes.](21-review-results.png)
+
+---
+
+![If you open Snapshot again it will show you the stats for the updated layer (candidate sites occupy closer to 200 km^2 now).](22-snapshot.png)

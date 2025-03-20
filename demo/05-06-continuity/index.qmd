@@ -4,3 +4,56 @@ format:
     slide-number: true
 ---
 
+![This is what the completed model will look like. Let's build it together, step by step.](01-whole-model.png)
+
+---
+
+![First we need to add the UKCEH dataset along with "Union", "Distance map", "Less", "Intersection" and "Numeric constant."](02-first-row.png)
+
+---
+
+![Connect Deciduous Woodland and Coniferous Woodland to the Union component and rename it "Woodland."](03-first-row-union.png)
+
+---
+
+![Connect each of the other components as shown, rename the final component "Grassland 25" to indicate that it represents grassland within 25 m of woodland. Save and run the model.](06-first-row-intersection.png)
+
+---
+
+![Now we simply replicate the last 3 components of the row. Right click each component and select clone to copy them one by one.](07-clone.png)
+
+---
+
+![Arrange the new components into a second row.](08-second-row.png)
+
+---
+
+![And connect the output from "Grassland 25" to the input of the second row's "Distance map."](09-second-row-join.png)
+
+---
+
+![Connect the rest of the second row components as shown and rename the final Intersection component "Grassland 50."](10-second-row-intersection.png)
+
+---
+
+![You can save and run the model to verify it is working.](11-second-row-ran.png)
+
+---
+
+![Repeat the process to create a third row of components connected as shown.](12-third-row-ran.png)
+
+---
+
+![And a fourth row.](13-fourth-row-ran.png)
+
+---
+
+![Now, to view the results on the Map, add converter and Map layer component and connected the output from Woodland and each of the Grassland ## components to the converter.](14-booleand-categorical-layer.png)
+
+---
+
+![Save and run the model and then toggle Map view to see the results. Here, I have edited the category colours to make a better visual.](15-map-view.png)
+
+---
+
+![In close up you can see how the model is identifying strips of grassland (each a single cell wide) around the edges of woodland from 25m to 100m distant from the woodland edges.](16-map-view-zoom.png)

@@ -12,7 +12,7 @@ format:
 
 ---
 
-![Connect them up as shown, save and run the model.](03-edge-connected.png)
+![Connect them up as shown, save and run the model. The Numeric constant needs to be set to 25 because the cell dimensions at z20 are just over 24m and we want to capture patches of woodland two cells wide and edge patches a single cell wide.](03-edge-connected.png)
 
 ---
 
@@ -81,3 +81,7 @@ format:
 ---
 
 ![If you zoom in on the map you will be able to see clearly the distribution of isolated and continuous woodland identified by the model.](20-map-view-zoom.png)
+
+---
+
+![The last thing to do before closing this project is to add the component to save the dataset. Name it something meaningful (e.g. wld = wealden district and z20 refers to the zoom level).](21-saved.png)

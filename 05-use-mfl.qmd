@@ -22,13 +22,17 @@ Here we present a series of demonstration projects in LIMMMA which illustrate th
 
 ## Creating opportunity maps
 
+The Climate Change Committee estimated that, to meet national carbon net zero commitments, UK woodland cover needs to increase from the current 13% to 19% by 2050.[^1] One important method of increasing woodland cover is through natural regeneration whereby grassland adjacent to existing woodland is managed in such a way as to allow trees and shrubs to self seed and mature until the new woodland is naturally established. To communicate the potential for natural regeneration to expand woodland cover we need to locate all areas of land that might be suitable and present them as an "Opportunity Map" which can then be used as a basis for designing land-management strategies and LNRS.
+
+[^1]: https://www.woodlandtrust.org.uk/plant-trees/natural-regeneration/
+
 Current features of LIMMMA already support the creation of opportunity maps based on combinations of criteria for site selection derived from loaded datasets (see below). The resulting maps can be iteratively modified in consultation with local stakeholders by adjusting selection criteria or by uploading additional datasets (e.g. locally created habitat maps or Natural England's [Habitat Network maps](https://naturalengland-defra.opendata.arcgis.com/datasets/fceb93850462454ab3fb5accea2be35b_0/explore?location=52.723073%2C-2.493668%2C6.99) and [Priority Habitats Inventory](https://naturalengland-defra.opendata.arcgis.com/datasets/39403df11c8044d998772db5b54ad86c_0/explore?location=52.705609%2C-2.483550%2C6.90)). However, the process of uploading new datasets still relies on technical support from the Sussex research team, meaning it is not as user friendly as we would like. Although we plan to add the capability for users to upload their own datasets without extra help, we recognise the value of being able to create and edit maps within the LIMMMA tool itself. So to makes things easier for non-expert users we are working on a new feature to enable users to manually edit map layers and enrich them with their own experiential knowledge directly in the LIMMMA interface.
 
 The following are worked examples of how to create an opportunity map by using a combination of datasets and model components to identify areas which match a specific set of criteria. Note, this is only a demonstration of the capabilities of LIMMMA and should not be taken as evidence in support of any specific land-use change strategies.
 
 ### Identify candidate land cover
 
-The first thing to do is to consider what type of habitat would be suitable for woodland creation. Let us assume that arable farmland is automatically excluded for food security reasons and that, therefore, grassland is the main candidate for woodland expansion. To get an initial idea of the scope for expanding woodland onto grassland areas we can add the UKCEH habitat map as a categorical map layer. Here is how we can use a land cover map to begin the process of creating an opportunity map in LIMMMA:
+The first thing to do is to consider what type of habitat would be suitable for natural regeneration of woodland. Let us assume that arable farmland is automatically excluded for food security reasons and that, therefore, grassland is the main candidate for woodland expansion. To get an initial idea of the scope for expanding woodland onto grassland areas we can add the UKCEH habitat map as a categorical map layer. Here is how we can use a land cover map to begin the process of creating an opportunity map in LIMMMA:
 
 <iframe class="slide-deck" src="./slides/demo/05-01-explore.html"></iframe>
 
@@ -36,11 +40,11 @@ Examination of the UKCEH Land Cover map reveals two types of grassland present i
 
 ### Set criteria for site selection
 
-We could use proximity to woodland and urban/suburban areas to further narrow down our site selection. For example, Improved Grassland situated adjacent to woodland and beyond a certain distance from built-up areas might represent our preferred locations for tree planting. The basic structure of this operation is to use two clusters of "Distance Map", "Greater/Less", and "Numeric Constant" components with set operation components ("Union" and "Intersection") to filter the candidate areas (in this case grassland) according to distance from woodland and urban/suburban. The following slides walk you through the steps to build the model.
+We could use proximity to woodland and urban/suburban areas to further narrow down our site selection. For example, Improved Grassland situated adjacent to woodland and beyond a certain distance from built-up areas might represent our preferred locations for natural regeneration. The basic structure of this operation is to use two clusters of "Distance Map", "Greater/Less", and "Numeric Constant" components with set operation components ("Union" and "Intersection") to filter the candidate areas (in this case grassland) according to distance from woodland and urban/suburban. The following slides walk you through the steps to build the model.
 
 <iframe class="slide-deck" src="./slides/demo/05-02-refine.html"></iframe>
 
-Of course this is a very simple example, but it demonstrates the basic principle of how to refine your search for candidate sites by progressively adding limiting conditions. These conditions need not be restricted to proximity to other habitats or land cover but could also include other biophysical datasets. For example you might set thresholds for rainfall, soil conditions, slope, land tenure or designations etc. Or you could use flood risk data to prioritise certain at risk areas for tree planting to improve natural flood prevention. On the other hand, you could use biodiversity data to identify areas of woodland with high populations of specific species which would benefit from an expansion of their already existing habitat into adjacent grassland.
+Of course this is a very simple example, but it demonstrates the basic principle of how to refine your search for candidate sites by progressively adding limiting conditions. These conditions need not be restricted to proximity to other habitats or land cover but could also include other biophysical datasets. For example you might set thresholds for rainfall, soil conditions, slope, land tenure or designations etc. Or you could use flood risk data to prioritise certain at risk areas for woodland regeneration to improve natural flood prevention. On the other hand, you could use biodiversity data to identify areas of woodland with high populations of specific species which would benefit from an expansion of their already existing habitat into adjacent grassland.
 
 ### Exclude areas from site selection
 
@@ -64,7 +68,13 @@ The first step in this process is to generate a new map layer which identifies f
 
 ### Identifying continuous candidate habitats
 
-The next step is to generate a map of continuous areas of Improved Grassland which begin adjacent to existing woodland.
+The next step is to generate a map of continuous areas of Improved Grassland which have edges directly adjacent to existing woodland. This will filter out isolated patches of grassland and ensure that our candidate sites only include areas of grassland with the potential for connecting to existing woodland.
+
+<iframe class="slide-deck" src="./slides/demo/05-06-continuity.html"></iframe>
+
+Now let's say we want to restrict our search for candidate sites to those areas which connect to Ancient Woodland so we can prioritise natural regeneration around these areas. To do this we can modify the model we just created to 1) narrow down the starting condition and 2) filter the final output.
+
+<iframe class="slide-deck" src="./slides/demo/05-07-continuity-mod.html"></iframe>
 
 ### Putting it together
 

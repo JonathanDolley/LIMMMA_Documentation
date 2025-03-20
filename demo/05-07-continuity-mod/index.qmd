@@ -1,0 +1,75 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![First, delete the "Woodland" component by right clicking and selecting "Delete."](01-delete.png)
+
+---
+
+![Next, add the components shown here: "Inputs" > "Designations", "Distance map", "Numeric constant", "Less", "Load dataset", "Intersection."](02-ancient-woodland-cluster.png)
+
+---
+
+![From the "Load dataset" dropdown, select the "Isolated woodland wld z20" dataset we saved earlier.](03-isolated-woodland.png)
+
+---
+
+![Don't forget to rename the component to match the name of the loaded dataset. If you replace the dataset at a later date and then re-run this model, you will need to reselect the dataset. The name of the component needs to remind you which dataset to select.](04-isolated-woodland-rename.png)
+
+---
+
+![Connect the components as shown. Set the "Numeric constant" to 100 and rename the "Less" component to "Within 100m of Ancient Woodland".](05-ancient-woodland-connected.png)
+
+---
+
+![Save and run the model. By adding this additional condition we are able to identify only areas of continuous grassland which connect to woodland fragments within reach of Ancient Woodland.](06-ancient-woodland-ran.png)
+
+---
+
+![To compare the results with our Woodland fragmentation analysis we can load the previously saved "Woodland fragmentation wld z20" dataset and add it as a new map layer.](07-load-layer.png)
+
+---
+
+![Save and run the model again and then toggle Map view to see the results. In this example I have changed the colours of "Connecting grassland" layer to black fading to red according to distance.](08-edit-colours-grassland.png)
+
+---
+
+![And I have changed the colours for the "Woodland fragmentation" layer to make the isolated fragments stand out in light green.](09-edit-colours-woodland.png)
+
+---
+
+![If we zoom in we can see how the model is working to identify grassland which connects with isolated fragments of woodland.](10-woodland-grassland-zoom.png)
+
+---
+
+![Add the "Ancient Woodland" layer to the map to verify that the model is working properly.](11-add-ancient-woodland-layer.png)
+
+---
+
+![We can see now where isolated fragments distant from Ancient Woodland are excluded from the selection of candidate grassland.](12-ancient-woodland-compare.png)
+
+---
+
+![Finally, to further restrict our selection to grassland which reaches from isolated fragments towards Ancient Woodland rather than away from it we need one more "Intersection" component which takes as its first input, the Grassland 100 output.](13-ancient-grassland-intersection.png)
+
+---
+
+![Having connected the "Intersection" component to Grassland 100, drag it up towards the top left of the model...](14-move-intersection.png)
+
+---
+
+![...and connect it to the component "Within 100m of Ancient Woodland."](15-connect-intersection-ancient.png)
+
+---
+
+![Drag the same "Intersection" component back to its first position adjacent to Grassland 100 and add a "Map layer" component to add it to Map view with the name "Candidate Grassland."](16-move-connect-intersection.png)
+
+---
+
+![Save and run the model and toggle to Map view.](17-ran-candidate-grassland.png)
+
+---
+
+![Now we have an opportunity map showing all the areas of Improved Grassland which stand the best chance of connecting woodland fragments to Ancient Woodland.](18-map-view-candidate-grassland.png)

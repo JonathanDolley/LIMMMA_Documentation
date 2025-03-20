@@ -19,6 +19,7 @@ project:
     - "demo/05-05-fragmentation/index.qmd"
     - "demo/05-06-continuity/index.qmd"
     - "demo/05-07-continuity-mod/index.qmd"
+    - "demo/05-08-combining/index.qmd"
 
 format:
   revealjs:

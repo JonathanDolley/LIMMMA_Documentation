@@ -78,9 +78,9 @@ Now let's say we want to restrict our search for candidate sites to those areas 
 
 ### Putting it together
 
-Finally, we can bring the outputs from the fragmentation and continuity analyses together to find priority candidate areas to improve woodland connectivity.
+Finally, we can bring the outputs from the fragmentation and continuity analyses together to find priority candidate areas to improve woodland connectivity. By creating a new project into which to bring the saved outputs from the previous analyses we can further filter the candidate sites using additional conditions. In this example, we will exclude all areas within already conserved habitats based on the designation of sites as nature reserves, sites of special scientific interest etc.
 
-
+<iframe class="slide-deck" src="./slides/demo/05-08-combining.html"></iframe>
 
 ### Potential new features
 

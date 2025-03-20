@@ -4,3 +4,56 @@ format:
     slide-number: true
 ---
 
+![To make the output of the Grassland continuity model available in other projects we need to save it. Let's save it as "Candidate grassland wld z20."](01-saved.png)
+
+---
+
+![Now create a new project with the same extent. Name the project "Wooldand Opportunity Map Composite" or something similar. We will create a new model to enable us to apply additional conditions to the selection of candidate grassland created using the previous two projects.](02-whole-model.png)
+
+---
+
+![Add the UKCEH Land Cover component and join the two woodland classes together with a "Union" component. Don't worry about where the "Union" output connects to yet.](03-ceh-union.png)
+
+---
+
+![Rename the "Union" component as "Original Woodland."](04-ceh-union-rename.png)
+
+---
+
+![Next add the components "Designations", "Load dataset", "Union", "Complement" and connect them as shown.](05-load-designations-union-complement.png)
+
+---
+
+![Select the dataset "Candidate grassland wld z20" from the "Load dataset" component and rename each component as shown.](06-load-union-renamed.png)
+
+---
+
+![Now add the components "Intersection", "Boolean to categorical dataset" and "Map layer." Connect the "Candidate grassland wld z20" to the "Intersection" component along with the output from the "Complement" component and rename the "Map layer" component as "Pre Intervention."](07-intersection-boolean-layer.png)
+
+---
+
+![Rename the "Intersection" component as "Candidate Sites" and connect its output to the "Boolean to categorical dataset" component.](08-intersection-rename.png)
+
+---
+
+![Finally, add another "Union" and "Map layer" component and connect them up as shown and rename the "Map layer" component as "Post Intervention Woodland."](09-union-layer.png)
+
+---
+
+![Rename the "Union" component as "Total woodland (post-intervention)" and save and run the model.](10-union-rename.png)
+
+---
+
+![Toggle Map view and adjust the colours to view the final opportunity map.](11-map-view-pre.png)
+
+---
+
+![Snapshot tool can be used to see summary statistics for each layer.](12-map-view-snapshot.png)
+
+---
+
+![Here, the bar chart in the Snapshot tool displays the area of total woodland post intervention.](13-map-view-post-snapshot.png)
+
+---
+
+![And here it shows the area of current woodland (pre intervention) and candidate sites for natural regeneration.](14-map-view-pre-snapshot.png)

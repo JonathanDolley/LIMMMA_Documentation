@@ -9,7 +9,11 @@
 
 [Kew Science](https://www.kew.org/science/nature-returns) are carrying out detailed empirical studies at Wakehurst to improve understanding of the amount of carbon stored in particular habitats and the factors that influence it. The case study in LIMMMA was to compare and contrast models of carbon storage, bringing in refinements from the Kew work in 'real time', being able to visualise uncertainties in both data sets and models. We aimed to utilise these latest empirical insights in LIMMMA to support the creation of models of carbon storage that could be scaled up from local to national level; complementing and comparing with those models and outputs currently in use. Outputs could be examined alongside existing estimates of carbon storage making both the uncertainties involved and limits to scaling clear. The principles apply to many other ongoing initiatives to enhance understanding of carbon storage.
 
-In the following walkthrough we demonstrate how the above ground carbon models were created and tested using LIMMMA.
+In the following walkthrough we demonstrate how the above ground carbon models were created and tested using LIMMMA. If you prefer a video walkthrough you can watch the video below. Otherwise, continue to the next section which provides the same content as the video in the form of text and slides.
+
+<div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/1a963fe3-73cd-4267-8285-0feea19fe3b4" loading="lazy" title="Synthesia video player - LIMMMA: Use Case #1: Above-Ground Carbon" allowfullscreen allow="encrypted-media; fullscreen;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+
+<br>
 
 ## Methodologies and Datasets
 
@@ -114,3 +118,26 @@ Now we have a model that generates a density map for above ground vegetative car
 Switching to 'Map view' we can explore the new map layer visually alongside other map layers and also use the 'Snapshot' tool to view information for selected areas.
 
 <iframe class="slide-deck" src="./slides/demo/03-10-map-view.html"></iframe>
+
+
+## Visualising Uncertainty
+
+Open completed model in separate window on extended screen and then build up from scratch for screenshots on laptop screen.
+
+1. Using a different habitat classification scheme to generate the carbon estimate.
+
+<iframe class="slide-deck" src="./slides/demo/03-11-agc-uncertainty-carbon.html"></iframe>
+
+2. Adding measurement and parameter uncertainty.
+
+<iframe class="slide-deck" src="./slides/demo/03-12-agc-uncertainty-measurement.html"></iframe>
+
+3. Adding false positives uncertainty.
+
+4. Adding Habitat Disagreement uncertainty.
+
+
+"quantitative evidence that is accompanied by estimates on the degree of uncertainty associated with that evidence, in a manner that is useful and visually intuitive, such that policymakers can decide relatively easily what weight to place on the available evidence in their decision-making. 
+The intention is that uncertainties are propagated appropriately through a model and are traceable back to their original source, where possible.
+We then implement these approaches into our four above-ground carbon storage models from the previous chapter and offer some initial conclusions." (Jeremy's report).
+

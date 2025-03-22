@@ -12,6 +12,8 @@ project:
     - "demo/03-08-convert/index.qmd"
     - "demo/03-09-outputs/index.qmd"
     - "demo/03-10-map-view/index.qmd"
+    - "demo/03-11-agc-uncertainty-carbon/index.qmd"
+    - "demo/03-12-agc-uncertainty-measurement/index.qmd"
     - "demo/05-01-explore/index.qmd"
     - "demo/05-02-refine/index.qmd"
     - "demo/05-03-exclude/index.qmd"

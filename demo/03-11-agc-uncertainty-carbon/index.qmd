@@ -1,0 +1,43 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Create a new project with the same extent (Wakehurst) and name it "Demo AGC Uncertainty." Then add to model canvas the first cluster of components (shown here) to generate the carbon storage estimate.](01-first-cluster.png)
+
+---
+
+![Rename the "Union" components to "Vegetation" and "Non-vegetation" as before. Select the "Feature Height" digital model and set the "Numeric constant" to 0.001 (i.e. negligable carbon).](02-first-cluster-selected.png)
+
+---
+
+![Next, connect the UKCEH classes as shown so that any land cover on which an above ground feature is likely to be vegetation is grouped together to be used with the feature height model and any land cover on which such features are more likely to be non-vegetative structures (e.g. buildings or vehicles) are given a default carbon value of 0.001.](03-first-cluster-connected-1.png)
+
+---
+
+![Connect the "Mask numeric datasets" components as shown to complete the cluster.](04-first-cluster-connected-2.png)
+
+---
+
+![You can now save and run the model to see the previews.](05-first-cluster-ran.png)
+
+---
+
+![Now add a second cluster of components (shown here) to calculate the carbon estimates from feature height dataset, merge this with the Non-vegetation estimate and add the output to Map view.](06-second-cluster.png)
+
+---
+
+![Make sure the "Linear carbon model" is selected in the "Expression" component, rename the numeric constants and edit their values to "Scale" = 6.4565 and "Error" = 0, and set the parameters to "t" and "ha." You could rename the "Merge" component as "Merge AGC" so you remember its function and also enter an appropriate name in the "Map layer" component.](07-second-cluster-selected.png)
+
+---
+
+![Then connect each component as shown here.](08-second-cluster-connected.png)
+
+---
+
+![Save and run the model.](09-second-cluster-ran.png)
+
+---
+
+![Toggle to Map view and you will be able to check that the results look reasonable.](10-map-view.png)

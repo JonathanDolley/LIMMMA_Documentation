@@ -5,7 +5,7 @@ navbar: false
 
 # Introduction {.unnumbered}
 
-The University of Sussex LIMMMA tool is designed to contribute to the timely and effective use of evidence for collaborative sustainable multifunctional land use initiatives in diverse contexts around the globe. Our central aims in developing this tool are to complement the growing number of decision support tools and landscape modelling approaches by:
+The University of Sussex [LIMMMA](https://landscapes.wearepal.ai/) tool is designed to contribute to the timely and effective use of evidence for collaborative sustainable multifunctional land use initiatives in diverse contexts around the globe. Our central aims in developing this tool are to complement the growing number of decision support tools and landscape modelling approaches by:
 
 - supporting the rapid sharing, analysis and comparison of new data and model developments that have implications for sustainable land use  policy and land management practices;
 - supporting efforts to scale up and extrapolate from new empirical findings as appropriate;

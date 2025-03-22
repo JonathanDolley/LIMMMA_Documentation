@@ -101,13 +101,13 @@ For example, you might want to exclude all grassland cover in conservation areas
 
 "Arithmetic" components are used to perform calculations on numeric grid data - a georeferenced matrix of cells, each with a number value instead of a boolean value. These include a range of simple operations such as add, subtract, and divide, a merge operation and a bespoke expression component which allows the user to select from a list of pre-built equations to allow for more complex calculations. These type of components are key to building models which estimate carbon storage, for example, but are also useful for quantifying the discrepancies between outputs from different models.
 
-### Revealing sources of uncertainty {.unnumbered}
+### Revealing locations of uncertainty {.unnumbered}
 
 Here is an example of using the ***Union*** and ***Set difference*** components to create a map showing the disagreement between the UKCEH and the Living England Land Cover maps over classifying vegetation and non-vegetation land cover classes.
 
 ![Using set operation components](images/01-screenshots-key/04-set-operations-difference.png)
 
-In ***Map View*** the final output of these set operations can be viewed as a new layer which reveals the potential sources of error derived from the different habitat mapping methods used to create the UKCEH and LE habitat datasets. This type of uncertainty map allows the user to pinpoint those locations where carbon estimates are subject to a higher degree of uncertainty.
+In ***Map View*** the final output of these set operations can be viewed as a new layer which reveals the potential sources of error derived from the different habitat mapping methods used to create the UK Centre for Ecology and Hydrology ([UKCEH](https://www.ceh.ac.uk/data/ukceh-land-cover-maps)) and the Living England ([LE](https://www.data.gov.uk/dataset/e207e1b3-72e2-4b6a-8aec-0c7b8bb9998c/living-england-habitat-map-phase-4) datasets. This type of uncertainty map allows the user to pinpoint those locations where carbon estimates are subject to a higher degree of uncertainty.
 
 ![replace with better image from project](images/01-screenshots-key/05-uncertainty.png)
 

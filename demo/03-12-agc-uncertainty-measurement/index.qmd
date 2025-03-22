@@ -1,0 +1,51 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Now pan up the canvas and add another cluster of components as shown here above the carbon model cluster.](01-first-cluster.png)
+
+---
+
+![Rename the first numeric constants to "Feature ht model Uncertainty (var)%" and "Linear model Uncertainty (var)%" and update their values to 0.0016 and 0.02225 respectively. Rename the "Sum" component to "Sum of variances" and the third numeric constant to "Square root" and give it the value 0.5](02-first-cluster-edited.png)
+
+---
+
+![Connect them up as shown.](03-first-cluster-connected.png)
+
+---
+
+![Next we need to add the output from the "Merge AGC" to node B of the "Multiply" component.](04-first-cluster-zoom-out.png)
+
+---
+
+![Like this.](05-first-cluster-zoom-connect.png)
+
+---
+
+![The first measurement uncertainty cluster should now look like this.](06-first-cluster-final-connection.png)
+
+---
+
+![Add one more "Power" and one more "Numeric constant" component to make the final conversion of the uncertainty metric.](07-final-power.png)
+
+---
+
+![Edit and connect the components as shown.](08-final-power-connected.png)
+
+---
+
+![To view the results in Map view add the "Map layer" component, rename and connect it, and the save and run the model.](09-map-layer.png)
+
+---
+
+![The "Carbon storage" layer and the "Measurement/parameter uncertainty" are now visible overlaid on one another.](10-map-view.png)
+
+---
+
+![Adjust the fill mode for the uncertainty layer to "RdBu" and you will be able to see where higher levels of uncertainty are associated with the carbon storage estimates.](11-adjust-fill-model.png)
+
+---
+
+[Adjusting the opacity of the uncertainty layer enables you to switch smoothly between viewing the carbon storage estimate and the uncertainty layer.](13-opacity-fading.mov)

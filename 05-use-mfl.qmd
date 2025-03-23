@@ -128,7 +128,3 @@ In the mock-up below, the map displays the combination of land-use changes while
 In the visual, positive impacts are represented by blue bars and negative by red. The length of bars indicates the scale of the impact according to the area of land involved which could also be modified for other parameters such as population density. The height of the bars represents the significance of the impact as indicated by stakeholders themselves.
 The idea is that this visualisation provides an entry point for discussion about the trade-offs and synergies between different outcomes and policy goals for any given strategy of land-use change.
 While we have not yet implemented this functionality in the current version of LIMMMA we see an opportunity to develop it and build it into future work to support LNRS and local planning and to support the development of virtual living labs.
-
-#### Comparing scenarios {.unnumbered}
-
-Not sure yet... Gamification bit?

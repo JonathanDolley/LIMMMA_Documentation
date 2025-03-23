@@ -119,8 +119,15 @@ Switching to 'Map view' we can explore the new map layer visually alongside othe
 
 <iframe class="slide-deck" src="./slides/demo/03-10-map-view.html"></iframe>
 
+While this carbon density map gives the impression of a highly detailed and accurate estimate of carbon stored in the landscape there is, in fact, one crucial layer of information missing. As it stands, it fails to communicate the various sources, dimensions and locations of uncertainty associated with the estimates of carbon density.
 
 ## Visualising Uncertainty
+
+This section explains how LIMMMA can be used to build into the carbon density models a system for visualising uncertainties associated with measurement, false positives and habitat classification methods.
+
+In the feature height model shown in the above walkthrough, there are at least four sources of uncertainty which can be modelled. These are:
+
+1. Measurement uncertainty: 
 
 Open completed model in separate window on extended screen and then build up from scratch for screenshots on laptop screen.
 

@@ -149,6 +149,8 @@ At zoom level 16 a model can cover the entire United Kingdom. In this case each 
 
 ![The same carbon model run at zoom level 16 over the entire UK](images/01-screenshots-key/13-zoom-16-uk.png)
 
+This doesn't mean, however, that a model cannot be run at a high zoom level (high resolution) across a wider area. It simply means that you would have to run the model multiple times across smaller areas and then stitch the results together in a separate project to view them on a single map. In this way you could generate a district or regional map at zoom level 24 without much difficulty.
+
 ## Extrapolation and Ground Truthing
 
 As a research team you might want to use sample data to extrapolate estimates of various parameters of, for example, soil health and biodiversity indicators across your sampling area. Multi-parameter georeferenced point data from sampling can be used in LIMMMA's Map View and Model View and the "Interpolation" component provides the capability to choose various interpolation methods using such point data to generate new map layers. This makes it possible to carry out ground truthing to callibrate models and to test their wider applicability beyond specific study sites.

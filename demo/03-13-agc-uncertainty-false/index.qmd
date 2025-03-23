@@ -1,0 +1,19 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Add this cluster of components above the previous cluster.](01-cluster.png)
+
+---
+
+![Rename the first "Numeric constant" to "False pos. uncertainty 1 s.d. tC/ha and enter the value 1. Rename the second "Numeric constant" to "Squared" and enter the value 2. Renam the "Union" component "Grassland & arable."](02-cluster-renamed.png)
+
+---
+
+![Now we need to select the non-woodland vegetation layers for which false positives are an issue. Drag the renamed "Grassland & arable" component closer to the CEH dataset and connect up the appropriate classes.](03-grassland-arable-connected.png)
+
+---
+
+![Move "Grassland & arable" back into position and connect the cluster of components as shown.](04-cluster-connected.png)

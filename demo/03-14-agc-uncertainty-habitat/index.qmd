@@ -1,0 +1,59 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Above the previous clusters, add a "Living England Land Cover" and a "Union" component.](01-le-union.png)
+
+---
+
+![Connect up all the land cover classes on which vegetation might be present and rename the "Union" component to "Vegetation LE."](02-le-union-connected.png)
+
+---
+
+![Now do the same with a new CEH Land Cover component (it would of course be possible to simply use the one already imported but it is less messy to repeat the CEH component closer to where we need it).](03-ceh-union.png)
+
+---
+
+![Connect the CEH land cover classes to the "Union" component as shown and rename it "Vegetation CEH."](04-ceh-union-connected.png)
+
+---
+
+![Now add two "Set difference" components and one "Union."](05-set-difference-union.png)
+
+---
+
+![Rename the first component "CEH - LE" as it will locate all the vegetation classes identified positively by CEH but not identified as such by the LE classification. The second will do the opposite so we will name it "LE - CEH".](06-renamed.png)
+
+---
+
+![Connect the components as shown and rename the "Union" component "Disagreement" because it locates all areas where CEH and LE classifications disagree on the vegetation classes.](07-connected.png)
+
+---
+
+![Next add the following cluster of components which will be used to assign variance values for areas of agreement and disagreement between the two habitat classifications.](08-mask-complement.png)
+
+---
+
+![Rename them as shown and update the values of the "Numeric constants."](09-renamed.png)
+
+---
+
+![Connect them as shown.](10-connected.png)
+
+---
+
+![To create the final uncertainty calculation for habitat disagreement we need the final cluster of components to merge and square the final values.](11-merge-power.png)
+
+---
+
+![Rename the "Merge" component to "Habitat uncertainty."](12-habitat-uncertainty.png)
+
+---
+
+![Connect the final cluster of components.](13-connected.png)
+
+---
+
+![The habitat uncertainty cluster should now look like this.](14-habitat-whole.png)

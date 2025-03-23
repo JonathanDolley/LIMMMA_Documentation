@@ -123,28 +123,41 @@ While this carbon density map gives the impression of a highly detailed and accu
 
 ## Visualising Uncertainty
 
-This section explains how LIMMMA can be used to build into the carbon density models a system for visualising uncertainties associated with measurement, false positives and habitat classification methods.
+This section explains how LIMMMA can be used to build into the carbon density models a system for visualising uncertainties associated with measurement, modelling parameters, false positives and habitat classification methods. In the feature height model shown in the above walkthrough, there are at least four sources of uncertainty which can be estimated and visualised. These are:
 
-In the feature height model shown in the above walkthrough, there are at least four sources of uncertainty which can be modelled. These are:
+1. ***Measurement uncertainty***: how much error is involved in the measurement of feature height?
+2. ***Parameter uncertainty***: how well does the allometric equation predict the relationship between the height of features and the quantity of stored carbon?
+3. ***False positives***: how likely is it for a "feature" in non-woodland vegetation habitats to be a false positive?
+4. ***Habitat disagreement***: how confident are we in the classification of each patch of habitat where it has a direct implication for the model?
 
-1. Measurement uncertainty: 
+Through analysis and comparison of the outputs from the models run at different scales, across different extents and using different habitat classification datasets, we produced initial estimates of uncertainty for each of these four sources. These are summarised in the table below.
 
-Open completed model in separate window on extended screen and then build up from scratch for screenshots on laptop screen.
+| Type | Description | Estimate |
+|:-------:|:----------------:|:-------------:|
+| Measurement | Measurement of feature height (Lidar terrain, surface). | 1 s.d. = 4% of height (e.g. 60cm on 15m tree). Var = 0.0016 |
+| Parameter  | Variability around model parameter fit to data due to natural variation. | Parameter fit 1.s.d = +/- 15% multiplier. Var = 0.02225  |
+| False positives  | Missing data requires interpolation or other assumptions.  | False positives on arable, grassland 1 s.d. = 1 tC/ha. Var = 0.1 |
+| Habitat disagreement | “Black box” ML model with unpredictable failure modes. | Locations of disagreement in habitat map. 1 s.d. = 60 tC/ha. Var = 3600 |
 
-1. Using a different habitat classification scheme to generate the carbon estimate.
+Each of these sources of uncertainty can be modelled in LIMMMA alongside the carbon storage model to generate a map output which shows not only the distribution of carbon density but also the distribution of uncertainty associated with each estimate for each cell (or patch of land) in the model. This makes it possible to trace not only the sources of uncertainty but also to identify those locations in the landscape where carbon estimates are most prone to error. Let's see how to create this type of model from scratch.
+
+The first step is to create a new project and to re-built the carbon storage model (this time we will use the alternative habitat classification).
 
 <iframe class="slide-deck" src="./slides/demo/03-11-agc-uncertainty-carbon.html"></iframe>
 
-2. Adding measurement and parameter uncertainty.
+Next we will add the model cluster for measurement and parameter uncertainty.
 
 <iframe class="slide-deck" src="./slides/demo/03-12-agc-uncertainty-measurement.html"></iframe>
 
-3. Adding false positives uncertainty.
+Now the cluster for false positives.
 
-4. Adding Habitat Disagreement uncertainty.
+<iframe class="slide-deck" src="./slides/demo/03-13-agc-uncertainty-false.html"></iframe>
 
+Finally, we will add the cluster to calculate uncertainty based on habitat disagreement.
 
-"quantitative evidence that is accompanied by estimates on the degree of uncertainty associated with that evidence, in a manner that is useful and visually intuitive, such that policymakers can decide relatively easily what weight to place on the available evidence in their decision-making. 
-The intention is that uncertainties are propagated appropriately through a model and are traceable back to their original source, where possible.
-We then implement these approaches into our four above-ground carbon storage models from the previous chapter and offer some initial conclusions." (Jeremy's report).
+<iframe class="slide-deck" src="./slides/demo/03-14-agc-uncertainty-habitat.html"></iframe>
+
+Have added model clusters to deal with uncertainty in measurement, parameters, false positives and habitat disagreement we now need to combine these into a composite uncertainty distribution. This is done as follows.
+
+<iframe class="slide-deck" src="./slides/demo/03-15-merge-uncertainty.html"></iframe>
 

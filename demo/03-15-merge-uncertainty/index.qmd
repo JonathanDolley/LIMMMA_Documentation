@@ -1,0 +1,31 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![Pan to the top right of the model canvas and add a cluster of: "Merge", "Power" and "Numeric constant."](01-merge.png)
+
+---
+
+![Rename the "Merge" component to "Combined uncertainty," and update the "Numeric constant" to 0.5 and name it "square root." Connect the components as shown.](02-merge-connected-habitat.png)
+
+---
+
+![Zoomed out, you can see the merge cluster top right taking the output from the habitat disagreement part of the model.](03-merge-zoom.png)
+
+---
+
+![Connect the outputs from each of the other two uncertainty calculations as shown here.](04-connected-measurement-false.png)
+
+---
+
+![Finally, we can add the output to Map view with the name "Standard Deviation absolute" and add the appropriate units.](05-power-units.png)
+
+---
+
+![The complete model should now look like this.](06-complete.png)
+
+---
+
+![In Map view, adjust the fill mode for the "Standard Deviation" layer to RdBu to make obvious the areas of highest uncertainty.](07-map-view.png)

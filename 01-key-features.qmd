@@ -77,7 +77,7 @@ In addition to loading datasets and generating map outputs, LIMMMA's modelling i
 
 The LIMMMA team is developing ways in which users can visualise and understand the location and impact of uncertainty in models, illustrating how that uncertainty is propagated through the landscape modelling process. The intention is that uncertainties are propagated appropriately through a model and are traceable back to their original source, where possible.
 
-See [@sec-un] in chapter 3 for a detailed explanation of our method for calculating combined estimates of uncertainty and confidence-levels along with a walkthrough of how to implement this method in LIMMMA as an integrated part of the carbon estimation model. Below we summarise the basic components used in this method and illustrate their use with simple operations.
+See [@sec-un] in chapter 3 or [download the full report](files/Carbon_Project_March_2025_v0.3.pdf) for a detailed explanation of our method for calculating combined estimates of uncertainty and confidence-levels along with a walkthrough of how to implement this method in LIMMMA as an integrated part of the carbon estimation model. Below we summarise the basic components used in this method and illustrate their use with simple operations.
 
 ### Set operations {.unnumbered}
 

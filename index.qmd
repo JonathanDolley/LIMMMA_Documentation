@@ -28,7 +28,7 @@ Examples of interest groups and potential uses of LIMMMA for nature recovery inc
 >
 > Large scale multi-site research projects such as the [Nature Returns](https://publications.naturalengland.org.uk/publication/5924090708492288) programme work at multiple pilot sites, seeking to understand how nature based solution interventions can restore and create habitats to obtain multiple benefits for nature and people at the landscape scale. For this type of initiative LIMMMA can help with sharing the data across sites and learning together rapidly with multi-site visualisation and analysis. It provides a way to integrate diverse types of geospatial data into models and maps for complex analysis while also making outputs and evidence accessible to other expert and non-expert stakeholders alike. 
 >
-> LIMMMA enables the possibility of using a single model and consistent data sources at very high resolution for local areas (e.g. 0.5 - 3m resolution aerial and satellite imagery), and simultaneously at regional or national levels making it easier to model the potential impact of land use decisions across different scales (see [link to carbon report]()) and to explore the limits to scaling of particular models.
+> LIMMMA enables the possibility of using a single model and consistent data sources at very high resolution for local areas (e.g. 0.5 - 3m resolution aerial and satellite imagery), and simultaneously at regional or national levels making it easier to model the potential impact of land use decisions across different scales (see the [carbon report download](files/Carbon_Project_March_2025_v0.3.pdf)) and to explore the limits to scaling of particular models.
 >
 > ***2. Practitioners***
 >

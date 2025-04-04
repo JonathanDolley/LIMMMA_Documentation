@@ -1,0 +1,23 @@
+---
+format:
+  revealjs: 
+    slide-number: true
+---
+
+![In Model view, click "Extent" to change the area covered by the model.](01-extent.png)
+
+---
+
+![This opens the Edit Project screen where you can select another extent such as Wealden District Council for example. Once you have changed the extent, click "Save and open project."](02-wealden.png)
+
+---
+
+![It will take you back to the Map view of your project. Run the model to see the results across the new extent. Here we can see that there are large areas of high uncertainty shown on the map.](03-uncertainty.png)
+
+---
+
+![Hide the uncertainty distribution and the carbon map becomes visible.](04-carbon.png)
+
+---
+
+![Adjusting the opacity of the uncertainty map you can see where uncertainty is high or low in relation to the carbon density estimates.](05-fade-in.gif)

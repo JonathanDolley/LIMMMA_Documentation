@@ -5,11 +5,11 @@
 }
 </style>
 
-# Use Case 1: Above Ground Carbon
+# Use Case 1: Above Ground Carbon & Visualising Uncertainty
 
 [Kew Science](https://www.kew.org/science/nature-returns) are carrying out detailed empirical studies at Wakehurst to improve understanding of the amount of carbon stored in particular habitats and the factors that influence it. The case study in LIMMMA was to compare and contrast models of carbon storage, bringing in refinements from the Kew work in 'real time', being able to visualise uncertainties in both data sets and models. We aimed to utilise these latest empirical insights in LIMMMA to support the creation of models of carbon storage that could be scaled up from local to national level; complementing and comparing with those models and outputs currently in use. Outputs could be examined alongside existing estimates of carbon storage making both the uncertainties involved and limits to scaling clear. The principles apply to many other ongoing initiatives to enhance understanding of carbon storage.
 
-In the following walkthrough we demonstrate how the above ground carbon models were created and tested using LIMMMA. If you prefer a video walkthrough you can watch the video below. Otherwise, continue to the next section which provides the same content as the video in the form of text and slides.
+In the following walkthrough we demonstrate how the above ground carbon models were created and tested using [LIMMMA](https://landscapes.wearepal.ai/). If you prefer a video walkthrough you can watch the video below. Otherwise, continue to the next section which provides the same content as the video in the form of text and slides.
 
 <div style="position: relative; overflow: hidden; padding-top: 56.25%;"><iframe src="https://share.synthesia.io/embeds/videos/1a963fe3-73cd-4267-8285-0feea19fe3b4" loading="lazy" title="Synthesia video player - LIMMMA: Use Case #1: Above-Ground Carbon" allowfullscreen allow="encrypted-media; fullscreen;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
 
@@ -121,9 +121,30 @@ Switching to 'Map view' we can explore the new map layer visually alongside othe
 
 While this carbon density map gives the impression of a highly detailed and accurate estimate of carbon stored in the landscape there is, in fact, one crucial layer of information missing. As it stands, it fails to communicate the various sources, dimensions and locations of uncertainty associated with the estimates of carbon density.
 
-## Visualising Uncertainty
+## Visualising Uncertainty {#sec-un}
 
-This section explains how LIMMMA can be used to build into the carbon density models a system for visualising uncertainties associated with measurement, modelling parameters, false positives and habitat classification methods. In the feature height model shown in the above walkthrough, there are at least four sources of uncertainty which can be estimated and visualised. These are:
+This section explains how LIMMMA can be used to build into the carbon density models a system for visualising uncertainties associated with measurement, modelling parameters, false positives and habitat classification methods. Here we describe the method adopted for calculating combined estimates of uncertainty and how this method is implemented in LIMMMA.
+
+### Uncertainty and confidence-level estimation {.unnumbered}
+
+Our proposed method combines uncertainty and level-of-confidence through a simple framework that combines all sources of uncertainty into one figure, providing a single measure of uncertainty that incorporates degree of confidence. We structure sources of uncertainty into two categories: (i) “data uncertainty”, uncertainty attributable to problems with the data, including measurement errors, natural variation, and missing or otherwise problematic data; and (ii) “methodological uncertainty”, which is primarily driven by our limited confidence in our models. The latter sources of uncertainty are typically signalled qualitatively (e.g. “low confidence”) so this approach attempts to integrate such concerns into a numerical framework.
+
+These differing sources of uncertainty need to be estimated and then propagated appropriately and/or conservatively through a model to capture a realistic approximation of uncertainty that is of some value to a decision-maker.
+We currently apply these approaches to incorporate uncertainty estimates into the following assessments:
+
+- What is the uncertainty (standard deviation) associated with a measurement of something at a single unit patch of landscape (a single cell in our LIMMMA model, typically varying in size from 1.5 m (field level, zoom 24) to 24 m (regional level, zoom 20). 
+- What is the uncertainty (standard deviation) associated with the measurement of the total (sum) of something across an extent made up of multiple modelled patches?
+- What is the uncertainty (standard deviation) associated with the estimation of the average value of something across an extent made up of multiple modelled patches?
+
+We combine uncertainties under the conservative assumption of independence, adding together the variances of each separate component of uncertainty to estimate the variance of the whole:
+
+- For an individual patch in the model, the standard deviation of the estimate for the patch (uncertainty estimate) is then the square root of this sum.
+- For an extent, the uncertainty of the sum of the estimated figure is the square root of the sum of each patch’s total variance.
+- The uncertainty of the average (the standard error) is this figure divided by the square root of the number of patches in the extent.
+
+### Implementing uncertainty visualisation {.unnumbered}
+
+In the feature height model shown in the above walkthrough, there are at least four sources of uncertainty which can be estimated and visualised. These are:
 
 1. ***Measurement uncertainty***: how much error is involved in the measurement of feature height?
 2. ***Parameter uncertainty***: how well does the allometric equation predict the relationship between the height of features and the quantity of stored carbon?
@@ -157,7 +178,12 @@ Finally, we will add the cluster to calculate uncertainty based on habitat disag
 
 <iframe class="slide-deck" src="./slides/demo/03-14-agc-uncertainty-habitat.html"></iframe>
 
-Have added model clusters to deal with uncertainty in measurement, parameters, false positives and habitat disagreement we now need to combine these into a composite uncertainty distribution. This is done as follows.
+Having added model clusters to deal with uncertainty in measurement, parameters, false positives and habitat disagreement we now need to combine these into a composite uncertainty distribution. This is done as follows.
 
 <iframe class="slide-deck" src="./slides/demo/03-15-merge-uncertainty.html"></iframe>
 
+But, what if we want to re-run the model over a larger area or in another location? All we need to do is toggle back to Model view, edit the project extent and re-run the model like this:
+
+<iframe class="slide-deck" src="./slides/demo/03-16-uncertainty-wld.html"></iframe>
+
+Now we have a carbon density map which can be examined in direct comparison with its associated uncertainty distribution. This basic model structure could then be used and improved to test the effects of different assumptions about uncertainty, compare relative uncertainties associated with different data sources and models, or run at various scales and locations to produce new insights.

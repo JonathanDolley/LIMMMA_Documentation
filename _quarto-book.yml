@@ -4,16 +4,15 @@ project:
   pre-render: quarto render --profile slides
 
 book:
-  title: "LIMMMA Documentation"
+  title: "The LIMMMA Platform"
   chapters:
     - index.qmd
     - 01-key-features.qmd
     - 02-getting-started.qmd
     - 03-use-agc.qmd
-    - 04-use-bgc.qmd
     - 05-use-mfl.qmd
+    - 04-use-bgc.qmd
     - 06-use-ai.qmd
-    - glossary.qmd
 
 format:
   html:
@@ -22,5 +21,5 @@ format:
 
 margin-header: |
   ![](/images/logos/LIMMMA-Logo.png)
-  [Try LIMMMA](https://landscapes.wearepal.ai/)
+  [Try LIMMMA now](https://landscapes.wearepal.ai/)
 

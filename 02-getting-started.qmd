@@ -2,11 +2,11 @@
 
 ## Making an account
 
-Sign in or sign up to make an account.
+Sign in or sign up to make an account here: [https://landscapes.wearepal.ai/](https://landscapes.wearepal.ai/)
 
 ![](images/02-screenshots-start/02-sign-up.png)
 
-Then select a team or create a new one.
+Then select a team or create a new one. You will automatically be added to the "Guest" team where you can view live demo projects. Details of how these live demo projects were created are given in chapters 3 and 5. 
 
 ![](images/02-screenshots-start/03-select-team.png)
 

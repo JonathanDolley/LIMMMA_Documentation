@@ -5,7 +5,7 @@
 }
 </style>
 
-# Use Case 3: Multifunctional Landscape Analysis
+# Use Case 2: Multifunctional Landscape Analysis
 
 Carbon density maps provide only one part of the evidence required for landscape management and planning strategies.
 In addition to understanding the impact of land management practices and land use change on carbon storage and emissions, it is also important recognise the multiple impacts on biodiversity and various other ecosystem services such as flood prevention, food and water supply, cultural and recreational benefits etc.
@@ -18,7 +18,7 @@ By integrating map outputs from sources such as SHELAA and BNG analysis with car
 LIMMMA can thus enable a collaborative process of developing opportunity maps for LNRS and support ongoing monitoring of the implementation and impacts of individual projects across the landscape.
 
 Working with Wealden District Council and the Sussex LNRS we have begun to explore the potential for such an approach and to design new features which can be added to LIMMMA to facilitate these type of collaborative processes.
-Here we present a series of demonstration projects in LIMMMA which illustrate the power and flexibility for using the tool in multifunctional landscape analysis.
+Here we present a series of demonstration projects in LIMMMA which illustrate the power and flexibility for using the platform in multifunctional landscape analysis.
 
 ## Creating opportunity maps
 
@@ -26,7 +26,7 @@ The Climate Change Committee estimated that, to meet national carbon net zero co
 
 [^1]: https://www.woodlandtrust.org.uk/plant-trees/natural-regeneration/
 
-Current features of LIMMMA already support the creation of opportunity maps based on combinations of criteria for site selection derived from loaded datasets (see below). The resulting maps can be iteratively modified in consultation with local stakeholders by adjusting selection criteria or by uploading additional datasets (e.g. locally created habitat maps or Natural England's [Habitat Network maps](https://naturalengland-defra.opendata.arcgis.com/datasets/fceb93850462454ab3fb5accea2be35b_0/explore?location=52.723073%2C-2.493668%2C6.99) and [Priority Habitats Inventory](https://naturalengland-defra.opendata.arcgis.com/datasets/39403df11c8044d998772db5b54ad86c_0/explore?location=52.705609%2C-2.483550%2C6.90)). However, the process of uploading new datasets still relies on technical support from the Sussex research team, meaning it is not as user friendly as we would like. Although we plan to add the capability for users to upload their own datasets without extra help, we recognise the value of being able to create and edit maps within the LIMMMA tool itself. So to makes things easier for non-expert users we are working on a new feature to enable users to manually edit map layers and enrich them with their own experiential knowledge directly in the LIMMMA interface.
+Current features of LIMMMA already support the creation of opportunity maps based on combinations of criteria for site selection derived from loaded datasets (see below). The resulting maps can be iteratively modified in consultation with local stakeholders by adjusting selection criteria or by uploading additional datasets (e.g. locally created habitat maps or Natural England's [Habitat Network maps](https://naturalengland-defra.opendata.arcgis.com/datasets/fceb93850462454ab3fb5accea2be35b_0/explore?location=52.723073%2C-2.493668%2C6.99) and [Priority Habitats Inventory](https://naturalengland-defra.opendata.arcgis.com/datasets/39403df11c8044d998772db5b54ad86c_0/explore?location=52.705609%2C-2.483550%2C6.90)). However, the process of uploading new datasets still relies on technical support from the Sussex research team, meaning it is not as user friendly as we would like. Although we plan to add the capability for users to upload their own datasets without extra help, we recognise the value of being able to create and edit maps within the LIMMMA platform itself. So to makes things easier for non-expert users we are working on a new feature to enable users to manually edit map layers and enrich them with their own experiential knowledge directly in the LIMMMA interface.
 
 The following are worked examples of how to create an opportunity map by using a combination of datasets and model components to identify areas which match a specific set of criteria. Note, this is only a demonstration of the capabilities of LIMMMA and should not be taken as evidence in support of any specific land-use change strategies.
 
@@ -88,21 +88,15 @@ Now we have seen how to create an opportunity map, refine it and add outputs as 
 
 The functions described above provide a flexible way of creating opportunity maps based on landscape characteristics (e.g. land cover types and biophysical conditions) and socio-economic data (e.g. indicators of deprivation). However, the resulting maps can only be used as a foundation or starting point for developing land-use strategies because they do not take into account the peculiarities of local contexts or the experiential knowledge of local communities. 
 
-Technically, this local and contextual information can be imported into LIMMMA once it has been gathered and processed using other software tools. However, it would be preferable to be able to capture such insights from within the LIMMMA tool itself so that the data could be used directly to improve the selection of candidate sites. For example, Farm Clusters may propose specific interventions on sections of their owned land which they could add the opportunity map. Or community conservation groups might want to be able to identify on the map specific areas they know to be of high importance for endangered species. Focus groups with local residents might reveal important information about access, use and quality of particular locations which would otherwise remain undifferentiated in habitat maps but which have implications for their suitability for specific types of intervention. Each of these examples call for a function that enables the user to edit, draw on and annotate map layers in Map view to save for use in Model view. Below is a mock-up of how this "Map drawing" function might work.
+Technically, this local and contextual information can be imported into LIMMMA once it has been gathered and processed using other software. However, it would be preferable to be able to capture such insights from within the LIMMMA platform itself so that the data could be used directly to improve the selection of candidate sites. For example, Farm Clusters may propose specific interventions on sections of their owned land which they could add the opportunity map. Or community conservation groups might want to be able to identify on the map specific areas they know to be of high importance for endangered species. Focus groups with local residents might reveal important information about access, use and quality of particular locations which would otherwise remain undifferentiated in habitat maps but which have implications for their suitability for specific types of intervention. Each of these examples call for a function that enables the user to edit, draw on and annotate map layers in Map view to save for use in Model view. Below is a mock-up of how this "Map drawing" function might work.
 
 ![Mock-up of adding contextual information in Map view by drawing or painting shapes and adding labels and links.](images/05-screenshots-mfl/05-01-user-generated-layer-mockup.jpg)
 
 ## Visualising scenarios
 
-Another application of this potential new function would be to enable the design of bespoke land-use change scenarios within LIMMMA in consultation with local stakeholders. Although scenario maps made in other software tools can already be imported into LIMMMA with support from the Sussex technical team, it would be much easier for users if they could create such maps directly within LIMMMA itself. Once the new function is completed, it would enable users design  land-cover maps from scratch or modify existing map layers to create new ones and to use these layers in models to analyse the potential impacts of proposed land-use changes on multiple outcomes.
+Another application of this potential new function would be to enable the design of bespoke land-use change scenarios within LIMMMA in consultation with local stakeholders. Although scenario maps made in other software can already be imported into LIMMMA with support from the Sussex technical team, it would be much easier for users if they could create such maps directly within LIMMMA itself. Once the new function is completed, it would enable users design  land-cover maps from scratch or modify existing map layers to create new ones and to use these layers in models to analyse the potential impacts of proposed land-use changes on multiple outcomes.
 
-The capability to generate this type of scenario analysis once scenario maps have been created is quite straightforward and relies on LIMMMA's functionality for saving model outputs for use as datasets in new models.
-
-### Current capabilities
-
-Using carbon density maps with opportunity maps.
-
-Adding BNG?
+The capability to generate this type of scenario analysis once scenario maps have been created is quite straightforward and relies on LIMMMA's functionality for saving model outputs for use as datasets in new models. For example the carbon density maps generated in the AGC project could be imported into a project which combined the woodland opportunity map and a housing and commercial development plan map to explore the potential impact of implementing LNRS alongside other land-use plans on carbon storage.
 
 ### Potential new features
 

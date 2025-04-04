@@ -17,6 +17,7 @@ project:
     - "demo/03-13-agc-uncertainty-false/index.qmd"
     - "demo/03-14-agc-uncertainty-habitat/index.qmd"
     - "demo/03-15-merge-uncertainty/index.qmd"
+    - "demo/03-16-uncertainty-wld/index.qmd"
     - "demo/05-01-explore/index.qmd"
     - "demo/05-02-refine/index.qmd"
     - "demo/05-03-exclude/index.qmd"

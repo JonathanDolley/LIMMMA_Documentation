@@ -48,4 +48,4 @@ format:
 
 ---
 
-[Adjusting the opacity of the uncertainty layer enables you to switch smoothly between viewing the carbon storage estimate and the uncertainty layer.](13-opacity-fading.gif)
+![Adjusting the opacity of the uncertainty layer enables you to switch smoothly between viewing the carbon storage estimate and the uncertainty layer.](13-opacity-fading.gif)
